@@ -81,6 +81,14 @@ export function TransactionForm({
   const [destAccountId, setDestAccountId] = useState<string>(
     transaction?.destination_account_id ?? "none",
   );
+  const [paymentMethod, setPaymentMethod] = useState<string>(
+    () => {
+      const v = (transaction?.payment_method ?? "").toLowerCase();
+      if (v.includes("pix")) return "Pix";
+      if (v.includes("cr")) return "Crédito";
+      return "";
+    },
+  );
 
   const rootCategories = categories.filter(
     (c) => !c.parent_id && c.type === type,
@@ -230,7 +238,23 @@ export function TransactionForm({
                   <Label>Categoria</Label>
                   <Select value={categoryId} onValueChange={(v) => setCategoryId(v ?? "none")}>
                     <SelectTrigger>
-                      <SelectValue placeholder="Selecione" />
+                      <SelectValue>
+                        {(v: string | null) => {
+                          if (!v || v === "none") return "— nenhuma —";
+                          const c = rootCategories.find((x) => x.id === v);
+                          return c ? (
+                            <span className="flex items-center gap-2">
+                              <span
+                                className="size-2 rounded-full"
+                                style={{ backgroundColor: c.color }}
+                              />
+                              {c.name}
+                            </span>
+                          ) : (
+                            "Selecione"
+                          );
+                        }}
+                      </SelectValue>
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="none">— nenhuma —</SelectItem>
@@ -257,13 +281,18 @@ export function TransactionForm({
                     disabled={subcategories.length === 0}
                   >
                     <SelectTrigger>
-                      <SelectValue
-                        placeholder={
-                          subcategories.length === 0
-                            ? "Nenhuma disponível"
-                            : "Selecione"
-                        }
-                      />
+                      <SelectValue>
+                        {(v: string | null) => {
+                          if (!v || v === "none")
+                            return subcategories.length === 0
+                              ? "Nenhuma disponível"
+                              : "— nenhuma —";
+                          return (
+                            subcategories.find((x) => x.id === v)?.name ??
+                            "Selecione"
+                          );
+                        }}
+                      </SelectValue>
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="none">— nenhuma —</SelectItem>
@@ -283,7 +312,12 @@ export function TransactionForm({
                 <Label>Local / estabelecimento</Label>
                 <Select value={placeId} onValueChange={(v) => setPlaceId(v ?? "none")}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Selecione" />
+                    <SelectValue>
+                      {(v: string | null) => {
+                        if (!v || v === "none") return "— não informar —";
+                        return places.find((x) => x.id === v)?.name ?? "Selecione";
+                      }}
+                    </SelectValue>
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="none">— não informar —</SelectItem>
@@ -312,7 +346,23 @@ export function TransactionForm({
                 </Label>
                 <Select value={accountId} onValueChange={(v) => setAccountId(v ?? "none")}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Selecione" />
+                    <SelectValue>
+                      {(v: string | null) => {
+                        if (!v || v === "none") return "— não informar —";
+                        const a = accounts.find((x) => x.id === v);
+                        return a ? (
+                          <span className="flex items-center gap-2">
+                            <span
+                              className="size-2 rounded-full"
+                              style={{ backgroundColor: a.color }}
+                            />
+                            {a.name}
+                          </span>
+                        ) : (
+                          "Selecione"
+                        );
+                      }}
+                    </SelectValue>
                   </SelectTrigger>
                   <SelectContent>
                     <SelectItem value="none">— não informar —</SelectItem>
@@ -339,7 +389,14 @@ export function TransactionForm({
                     onValueChange={(v) => setDestAccountId(v ?? "none")}
                   >
                     <SelectTrigger>
-                      <SelectValue placeholder="Selecione" />
+                      <SelectValue>
+                        {(v: string | null) => {
+                          if (!v || v === "none") return "— selecionar —";
+                          return (
+                            accounts.find((x) => x.id === v)?.name ?? "Selecione"
+                          );
+                        }}
+                      </SelectValue>
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="none">— selecionar —</SelectItem>
@@ -356,13 +413,30 @@ export function TransactionForm({
               )}
 
               <div className="grid gap-1.5">
-                <Label htmlFor="payment_method">Forma de pagamento</Label>
-                <Input
-                  id="payment_method"
-                  name="payment_method"
-                  defaultValue={transaction?.payment_method ?? ""}
-                  placeholder="Pix, débito, crédito…"
-                />
+                <Label>Forma de pagamento</Label>
+                <input type="hidden" name="payment_method" value={paymentMethod} />
+                <div className="grid grid-cols-2 gap-2">
+                  {(["Pix", "Crédito"] as const).map((opt) => {
+                    const active = paymentMethod === opt;
+                    return (
+                      <button
+                        key={opt}
+                        type="button"
+                        onClick={() =>
+                          setPaymentMethod(active ? "" : opt)
+                        }
+                        className={cn(
+                          "rounded-lg border px-3 py-2 text-sm font-medium transition-all",
+                          active
+                            ? "border-primary/60 bg-primary/15 text-primary ring-1 ring-primary/40"
+                            : "border-border/60 bg-card/40 text-muted-foreground hover:border-border hover:bg-card/60 hover:text-foreground",
+                        )}
+                      >
+                        {opt}
+                      </button>
+                    );
+                  })}
+                </div>
               </div>
             </CardContent>
           </Card>

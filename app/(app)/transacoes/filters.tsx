@@ -68,7 +68,12 @@ export function TransactionFilters({ categories, accounts }: Props) {
         onValueChange={(v) => update("category", v)}
       >
         <SelectTrigger>
-          <SelectValue placeholder="Categoria" />
+          <SelectValue>
+            {(v: string | null) => {
+              if (!v || v === "all") return "Todas as categorias";
+              return categories.find((c) => c.id === v)?.name ?? "Categoria";
+            }}
+          </SelectValue>
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="all">Todas as categorias</SelectItem>
@@ -85,7 +90,12 @@ export function TransactionFilters({ categories, accounts }: Props) {
         onValueChange={(v) => update("account", v)}
       >
         <SelectTrigger>
-          <SelectValue placeholder="Conta" />
+          <SelectValue>
+            {(v: string | null) => {
+              if (!v || v === "all") return "Todas as contas";
+              return accounts.find((a) => a.id === v)?.name ?? "Conta";
+            }}
+          </SelectValue>
         </SelectTrigger>
         <SelectContent>
           <SelectItem value="all">Todas as contas</SelectItem>

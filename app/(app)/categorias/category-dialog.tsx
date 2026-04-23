@@ -136,7 +136,12 @@ export function CategoryDialog({ category, parents, trigger }: Props) {
             <Label>Categoria pai (opcional)</Label>
             <Select value={parentId} onValueChange={(v) => setParentId(v ?? "none")}>
               <SelectTrigger>
-                <SelectValue />
+                <SelectValue>
+                  {(v: string | null) => {
+                    if (!v || v === "none") return "— categoria raiz —";
+                    return possibleParents.find((x) => x.id === v)?.name ?? "Selecione";
+                  }}
+                </SelectValue>
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="none">— categoria raiz —</SelectItem>
