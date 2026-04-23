@@ -18,6 +18,7 @@ const titleMap: Record<string, string> = {
   "/cartoes": "Cartões de crédito",
   "/metas": "Metas & Orçamentos",
   "/configuracoes": "Configurações",
+  "/admin": "Admin — Painel do dono",
 };
 
 export function AppHeader() {

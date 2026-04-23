@@ -15,45 +15,61 @@ import {
   Settings,
   LogOut,
   Plus,
+  Shield,
+  type LucideIcon,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { signOut } from "@/app/login/actions";
 
-const navSections = [
-  {
-    title: "Principal",
-    items: [
-      { href: "/", label: "Dashboard", icon: LayoutDashboard },
-      { href: "/transacoes", label: "Transações", icon: ArrowRightLeft },
-      { href: "/calendario", label: "Calendário", icon: CalendarDays },
-      { href: "/relatorios", label: "Relatórios", icon: BarChart3 },
-    ],
-  },
-  {
-    title: "Cadastros",
-    items: [
-      { href: "/contas", label: "Contas", icon: Wallet },
-      { href: "/categorias", label: "Categorias", icon: Tag },
-      { href: "/locais", label: "Locais", icon: MapPin },
-      { href: "/cartoes", label: "Cartões", icon: CreditCard },
-    ],
-  },
-  {
-    title: "Planejamento",
-    items: [
-      { href: "/metas", label: "Metas & Orçamentos", icon: Target },
-      { href: "/configuracoes", label: "Configurações", icon: Settings },
-    ],
-  },
-];
+type NavItem = { href: string; label: string; icon: LucideIcon };
+type NavSection = { title: string; items: NavItem[] };
+
+function buildNavSections(isAdmin: boolean): NavSection[] {
+  const sections: NavSection[] = [
+    {
+      title: "Principal",
+      items: [
+        { href: "/", label: "Dashboard", icon: LayoutDashboard },
+        { href: "/transacoes", label: "Transações", icon: ArrowRightLeft },
+        { href: "/calendario", label: "Calendário", icon: CalendarDays },
+        { href: "/relatorios", label: "Relatórios", icon: BarChart3 },
+      ],
+    },
+    {
+      title: "Cadastros",
+      items: [
+        { href: "/contas", label: "Contas", icon: Wallet },
+        { href: "/categorias", label: "Categorias", icon: Tag },
+        { href: "/locais", label: "Locais", icon: MapPin },
+        { href: "/cartoes", label: "Cartões", icon: CreditCard },
+      ],
+    },
+    {
+      title: "Planejamento",
+      items: [
+        { href: "/metas", label: "Metas & Orçamentos", icon: Target },
+        { href: "/configuracoes", label: "Configurações", icon: Settings },
+      ],
+    },
+  ];
+  if (isAdmin) {
+    sections.push({
+      title: "Dono",
+      items: [{ href: "/admin", label: "Admin", icon: Shield }],
+    });
+  }
+  return sections;
+}
 
 interface AppSidebarProps {
   userEmail: string;
+  isAdmin?: boolean;
 }
 
-export function AppSidebar({ userEmail }: AppSidebarProps) {
+export function AppSidebar({ userEmail, isAdmin = false }: AppSidebarProps) {
+  const navSections = buildNavSections(isAdmin);
   const pathname = usePathname();
 
   const isActive = (href: string) =>

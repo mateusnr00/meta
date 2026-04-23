@@ -302,3 +302,92 @@ from public.accounts a
 where a.archived = false;
 
 grant select on public.v_account_balances to authenticated;
+
+-- ============================================================================
+-- ADMIN DASHBOARD — controle de dono
+-- ============================================================================
+
+create table if not exists public.admin_users (
+  user_id uuid primary key references auth.users(id) on delete cascade,
+  added_at timestamptz not null default now()
+);
+alter table public.admin_users enable row level security;
+
+drop policy if exists "admins_can_see" on public.admin_users;
+create policy "admins_can_see" on public.admin_users
+  for select using (
+    exists (select 1 from public.admin_users au where au.user_id = auth.uid())
+  );
+
+create or replace function public.is_admin()
+returns boolean language sql stable security definer set search_path = public as $$
+  select exists (select 1 from public.admin_users where user_id = auth.uid());
+$$;
+
+create or replace function public.admin_overview()
+returns json language plpgsql stable security definer set search_path = public as $$
+declare v_result json;
+begin
+  if not public.is_admin() then raise exception 'Forbidden: admin only'; end if;
+  select json_build_object(
+    'total_users', (select count(*) from auth.users),
+    'active_7d', (select count(*) from auth.users where last_sign_in_at > now() - interval '7 days'),
+    'active_30d', (select count(*) from auth.users where last_sign_in_at > now() - interval '30 days'),
+    'new_users_30d', (select count(*) from auth.users where created_at > now() - interval '30 days'),
+    'total_transactions', (select count(*) from public.transactions),
+    'total_receitas', (select coalesce(sum(amount), 0) from public.transactions where type = 'receita' and status = 'pago'),
+    'total_despesas', (select coalesce(sum(amount), 0) from public.transactions where type = 'despesa' and status = 'pago'),
+    'total_accounts', (select count(*) from public.accounts where archived = false),
+    'total_admins', (select count(*) from public.admin_users)
+  ) into v_result;
+  return v_result;
+end $$;
+
+create or replace function public.admin_list_users()
+returns table (
+  id uuid, email text, created_at timestamptz, last_sign_in_at timestamptz,
+  email_confirmed boolean, is_admin boolean,
+  accounts_count int, transactions_count int,
+  total_receitas numeric, total_despesas numeric, last_transaction_at timestamptz
+) language plpgsql stable security definer set search_path = public as $$
+begin
+  if not public.is_admin() then raise exception 'Forbidden: admin only'; end if;
+  return query
+  select
+    u.id, u.email::text, u.created_at, u.last_sign_in_at,
+    (u.email_confirmed_at is not null) as email_confirmed,
+    exists (select 1 from public.admin_users au where au.user_id = u.id) as is_admin,
+    coalesce((select count(*)::int from public.accounts a where a.user_id = u.id and a.archived = false), 0),
+    coalesce((select count(*)::int from public.transactions t where t.user_id = u.id), 0),
+    coalesce((select sum(t.amount) from public.transactions t where t.user_id = u.id and t.type = 'receita' and t.status = 'pago'), 0),
+    coalesce((select sum(t.amount) from public.transactions t where t.user_id = u.id and t.type = 'despesa' and t.status = 'pago'), 0),
+    (select max(t.occurred_at) from public.transactions t where t.user_id = u.id)
+  from auth.users u
+  order by u.created_at desc;
+end $$;
+
+create or replace function public.admin_promote(p_user_id uuid)
+returns void language plpgsql security definer set search_path = public as $$
+begin
+  if not public.is_admin() then raise exception 'Forbidden: admin only'; end if;
+  insert into public.admin_users (user_id) values (p_user_id) on conflict do nothing;
+end $$;
+
+create or replace function public.admin_demote(p_user_id uuid)
+returns void language plpgsql security definer set search_path = public as $$
+declare v_admin_count int;
+begin
+  if not public.is_admin() then raise exception 'Forbidden: admin only'; end if;
+  select count(*) into v_admin_count from public.admin_users;
+  if v_admin_count <= 1 then raise exception 'Não é possível remover o último admin'; end if;
+  delete from public.admin_users where user_id = p_user_id;
+end $$;
+
+grant execute on function public.is_admin() to authenticated;
+grant execute on function public.admin_overview() to authenticated;
+grant execute on function public.admin_list_users() to authenticated;
+grant execute on function public.admin_promote(uuid) to authenticated;
+grant execute on function public.admin_demote(uuid) to authenticated;
+
+-- Para promover um usuário manualmente (execute no SQL Editor):
+-- insert into public.admin_users (user_id) select id from auth.users where email = 'seu@email.com';
