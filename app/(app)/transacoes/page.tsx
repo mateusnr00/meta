@@ -169,11 +169,11 @@ export default async function TransacoesPage({ searchParams }: PageProps) {
             <Table>
               <TableHeader>
                 <TableRow className="hover:bg-transparent">
-                  <TableHead className="w-[120px]">Data</TableHead>
+                  <TableHead className="w-[110px]">Data</TableHead>
                   <TableHead>Descrição</TableHead>
-                  <TableHead>Categoria</TableHead>
-                  <TableHead>Conta</TableHead>
-                  <TableHead>Status</TableHead>
+                  <TableHead className="hidden md:table-cell">Categoria</TableHead>
+                  <TableHead className="hidden lg:table-cell">Conta</TableHead>
+                  <TableHead className="hidden sm:table-cell">Status</TableHead>
                   <TableHead className="text-right">Valor</TableHead>
                   <TableHead className="w-[50px]" />
                 </TableRow>
@@ -192,7 +192,7 @@ export default async function TransacoesPage({ searchParams }: PageProps) {
                         </div>
                       ) : null}
                     </TableCell>
-                    <TableCell>
+                    <TableCell className="hidden md:table-cell">
                       {t.category ? (
                         <div className="flex items-center gap-2">
                           <span
@@ -205,7 +205,7 @@ export default async function TransacoesPage({ searchParams }: PageProps) {
                         <span className="text-xs text-muted-foreground">—</span>
                       )}
                     </TableCell>
-                    <TableCell>
+                    <TableCell className="hidden lg:table-cell">
                       {t.account ? (
                         <div className="flex items-center gap-2">
                           <span
@@ -218,7 +218,7 @@ export default async function TransacoesPage({ searchParams }: PageProps) {
                         <span className="text-xs text-muted-foreground">—</span>
                       )}
                     </TableCell>
-                    <TableCell>
+                    <TableCell className="hidden sm:table-cell">
                       <Badge
                         variant={
                           t.status === "pago"

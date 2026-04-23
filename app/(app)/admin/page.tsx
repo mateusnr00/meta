@@ -222,13 +222,13 @@ export default async function AdminPage() {
               <TableHeader>
                 <TableRow className="hover:bg-transparent">
                   <TableHead>Usuário</TableHead>
-                  <TableHead>Cadastro</TableHead>
+                  <TableHead className="hidden md:table-cell">Cadastro</TableHead>
                   <TableHead>Último login</TableHead>
-                  <TableHead className="text-right">Contas</TableHead>
+                  <TableHead className="hidden sm:table-cell text-right">Contas</TableHead>
                   <TableHead className="text-right">Trans.</TableHead>
-                  <TableHead className="text-right">Receitas</TableHead>
-                  <TableHead className="text-right">Despesas</TableHead>
-                  <TableHead>Última atividade</TableHead>
+                  <TableHead className="hidden md:table-cell text-right">Receitas</TableHead>
+                  <TableHead className="hidden md:table-cell text-right">Despesas</TableHead>
+                  <TableHead className="hidden lg:table-cell">Última atividade</TableHead>
                   <TableHead className="w-[50px]" />
                 </TableRow>
               </TableHeader>
@@ -266,7 +266,7 @@ export default async function AdminPage() {
                         </div>
                       </div>
                     </TableCell>
-                    <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
+                    <TableCell className="hidden md:table-cell whitespace-nowrap text-xs text-muted-foreground">
                       {formatDateTime(u.created_at)}
                     </TableCell>
                     <TableCell className="whitespace-nowrap text-xs">
@@ -278,19 +278,19 @@ export default async function AdminPage() {
                         <span className="text-muted-foreground">nunca</span>
                       )}
                     </TableCell>
-                    <TableCell className="text-right text-sm tabular-nums">
+                    <TableCell className="hidden sm:table-cell text-right text-sm tabular-nums">
                       {u.accounts_count}
                     </TableCell>
                     <TableCell className="text-right text-sm tabular-nums">
                       {u.transactions_count}
                     </TableCell>
-                    <TableCell className="text-right text-sm tabular-nums text-success">
+                    <TableCell className="hidden md:table-cell text-right text-sm tabular-nums text-success">
                       {formatCurrency(Number(u.total_receitas))}
                     </TableCell>
-                    <TableCell className="text-right text-sm tabular-nums text-danger">
+                    <TableCell className="hidden md:table-cell text-right text-sm tabular-nums text-danger">
                       {formatCurrency(Number(u.total_despesas))}
                     </TableCell>
-                    <TableCell className="whitespace-nowrap text-xs text-muted-foreground">
+                    <TableCell className="hidden lg:table-cell whitespace-nowrap text-xs text-muted-foreground">
                       {u.last_transaction_at
                         ? timeAgo(u.last_transaction_at)
                         : "—"}
