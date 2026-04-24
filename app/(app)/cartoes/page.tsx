@@ -43,22 +43,6 @@ export default async function CartoesPage({
     .order("name");
   const cards = (cardsData ?? []) as CreditCard[];
 
-  // Definir mês/ano de fatura. Default: próxima fatura a vencer (para cada
-  // cartão pode ser diferente, mas usamos o primeiro como referência).
-  let targetMonth = Number(sp.m);
-  let targetYear = Number(sp.y);
-  if (!targetMonth || !targetYear) {
-    if (cards.length > 0) {
-      const next = currentOpenInvoice(cards[0].closing_day, cards[0].due_day, now);
-      // O label é "Fatura de Mês/Ano" — pegamos mês e ano do due
-      targetMonth = next.dueDate.getMonth() + 1;
-      targetYear = next.dueDate.getFullYear();
-    } else {
-      targetMonth = now.getMonth() + 1;
-      targetYear = now.getFullYear();
-    }
-  }
-
   const { data: txData } = await supabase
     .from("transactions")
     .select("id,credit_card_id,amount,description,occurred_at,status,type,category:categories!transactions_category_id_fkey(id,name,color)")
@@ -68,6 +52,43 @@ export default async function CartoesPage({
   const txs = (txData ?? []) as unknown as (Transaction & {
     category?: { id: string; name: string; color: string } | null;
   })[];
+
+  // Default do mês: fatura que contém a transação mais recente (entre todos os
+  // cartões). Se não houver transações, usa a próxima fatura a vencer do
+  // primeiro cartão.
+  let targetMonth = Number(sp.m);
+  let targetYear = Number(sp.y);
+  if (!targetMonth || !targetYear) {
+    if (txs.length > 0 && cards.length > 0) {
+      const mostRecent = txs[0];
+      const card =
+        cards.find((c) => c.id === mostRecent.credit_card_id) ?? cards[0];
+      const occurred = new Date(mostRecent.occurred_at);
+      const closingDay = card.closing_day;
+      const dueDay = card.due_day;
+      let m = occurred.getMonth();
+      let y = occurred.getFullYear();
+      if (occurred.getDate() > closingDay) m += 1;
+      if (dueDay <= closingDay) m += 1;
+      while (m > 11) {
+        m -= 12;
+        y += 1;
+      }
+      targetMonth = m + 1;
+      targetYear = y;
+    } else if (cards.length > 0) {
+      const next = currentOpenInvoice(
+        cards[0].closing_day,
+        cards[0].due_day,
+        now,
+      );
+      targetMonth = next.dueDate.getMonth() + 1;
+      targetYear = next.dueDate.getFullYear();
+    } else {
+      targetMonth = now.getMonth() + 1;
+      targetYear = now.getFullYear();
+    }
+  }
 
   const totalLimit = cards.reduce((a, b) => a + Number(b.credit_limit || 0), 0);
 

@@ -49,10 +49,18 @@ next-env.d.ts
 # PDFs e dados pessoais (faturas, parsed data)
 *.pdf
 *_pos.txt
+pf_*.txt
+pj_*.txt
 invoices-parsed.json
+bank-parsed.json
 insert-transactions.sql
 inter-compact.sql
+bank-insert.sql
+bank-*.sql
+pfc6_*.sql
 extract-pdf.mjs
 parse-invoices.mjs
+parse-bank.mjs
 compact-inter.mjs
 build-inserts.mjs
+split-bank.mjs
