@@ -40,7 +40,7 @@ export default async function TransacoesPage({ searchParams }: PageProps) {
   let query = supabase
     .from("transactions")
     .select(
-      "id,type,amount,description,occurred_at,status,essentiality,category:categories!transactions_category_id_fkey(id,name,color,essentiality),account:accounts!transactions_account_id_fkey(id,name,color),place:places(id,name)",
+      "id,type,amount,description,occurred_at,status,essentiality,payment_method,category:categories!transactions_category_id_fkey(id,name,color,essentiality),account:accounts!transactions_account_id_fkey(id,name,color),place:places(id,name),credit_card:credit_cards(id,name,color)",
     )
     .order("occurred_at", { ascending: false })
     .limit(200);
@@ -172,7 +172,7 @@ export default async function TransacoesPage({ searchParams }: PageProps) {
                   <TableHead className="w-[110px]">Data</TableHead>
                   <TableHead>Descrição</TableHead>
                   <TableHead className="hidden md:table-cell">Categoria</TableHead>
-                  <TableHead className="hidden lg:table-cell">Conta</TableHead>
+                  <TableHead className="hidden lg:table-cell">Pagamento</TableHead>
                   <TableHead className="hidden sm:table-cell">Status</TableHead>
                   <TableHead className="text-right">Valor</TableHead>
                   <TableHead className="w-[50px]" />
@@ -206,14 +206,27 @@ export default async function TransacoesPage({ searchParams }: PageProps) {
                       )}
                     </TableCell>
                     <TableCell className="hidden lg:table-cell">
-                      {t.account ? (
-                        <div className="flex items-center gap-2">
-                          <span
-                            className="size-2 rounded-full"
-                            style={{ backgroundColor: t.account.color }}
-                          />
-                          <span className="text-sm">{t.account.name}</span>
+                      {t.credit_card ? (
+                        <div className="flex items-center gap-1.5">
+                          <Badge
+                            variant="outline"
+                            className="gap-1.5 border-primary/30 pl-1.5 text-[10px]"
+                            style={{ color: t.credit_card.color }}
+                          >
+                            <span
+                              className="size-1.5 rounded-full"
+                              style={{ backgroundColor: t.credit_card.color }}
+                            />
+                            Crédito · {t.credit_card.name}
+                          </Badge>
                         </div>
+                      ) : t.payment_method ? (
+                        <Badge
+                          variant="outline"
+                          className="gap-1 text-[10px] capitalize"
+                        >
+                          {t.payment_method}
+                        </Badge>
                       ) : (
                         <span className="text-xs text-muted-foreground">—</span>
                       )}

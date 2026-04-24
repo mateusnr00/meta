@@ -108,6 +108,7 @@ export interface TransactionWithRelations extends Transaction {
   place?: Pick<Place, "id" | "name"> | null;
   account?: Pick<Account, "id" | "name" | "color"> | null;
   destination_account?: Pick<Account, "id" | "name" | "color"> | null;
+  credit_card?: Pick<CreditCard, "id" | "name" | "color"> | null;
 }
 
 export interface Budget {

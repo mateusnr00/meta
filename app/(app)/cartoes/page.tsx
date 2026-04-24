@@ -7,8 +7,13 @@ import {
 import { createClient } from "@/lib/supabase/server";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { MonthNav } from "@/components/month-nav";
 import { formatCurrency, formatDate } from "@/lib/format";
-import { currentOpenInvoice, daysUntil } from "@/lib/credit-card";
+import {
+  invoiceForDueMonth,
+  currentOpenInvoice,
+  daysUntil,
+} from "@/lib/credit-card";
 import type { CreditCard, Transaction } from "@/types/database";
 import { CardDialog, EditCardButton } from "./card-dialog";
 import { DeleteButton } from "../categorias/delete-button";
@@ -16,7 +21,19 @@ import { deleteCreditCard } from "./actions";
 
 export const dynamic = "force-dynamic";
 
-export default async function CartoesPage() {
+interface SearchParams {
+  m?: string;
+  y?: string;
+}
+
+export default async function CartoesPage({
+  searchParams,
+}: {
+  searchParams: Promise<SearchParams>;
+}) {
+  const sp = await searchParams;
+  const now = new Date();
+
   const supabase = await createClient();
 
   const { data: cardsData } = await supabase
@@ -26,26 +43,48 @@ export default async function CartoesPage() {
     .order("name");
   const cards = (cardsData ?? []) as CreditCard[];
 
-  // Buscar transações de cartão (todas despesas com credit_card_id)
-  // Filtramos depois por janela de cada cartão
+  // Definir mês/ano de fatura. Default: próxima fatura a vencer (para cada
+  // cartão pode ser diferente, mas usamos o primeiro como referência).
+  let targetMonth = Number(sp.m);
+  let targetYear = Number(sp.y);
+  if (!targetMonth || !targetYear) {
+    if (cards.length > 0) {
+      const next = currentOpenInvoice(cards[0].closing_day, cards[0].due_day, now);
+      // O label é "Fatura de Mês/Ano" — pegamos mês e ano do due
+      targetMonth = next.dueDate.getMonth() + 1;
+      targetYear = next.dueDate.getFullYear();
+    } else {
+      targetMonth = now.getMonth() + 1;
+      targetYear = now.getFullYear();
+    }
+  }
+
   const { data: txData } = await supabase
     .from("transactions")
-    .select("id,credit_card_id,amount,description,occurred_at,status,type")
+    .select("id,credit_card_id,amount,description,occurred_at,status,type,category:categories!transactions_category_id_fkey(id,name,color)")
     .eq("type", "despesa")
     .not("credit_card_id", "is", null)
     .order("occurred_at", { ascending: false });
-  const txs = (txData ?? []) as Transaction[];
+  const txs = (txData ?? []) as unknown as (Transaction & {
+    category?: { id: string; name: string; color: string } | null;
+  })[];
 
   const totalLimit = cards.reduce((a, b) => a + Number(b.credit_limit || 0), 0);
 
-  // Calcular totais por cartão
   const cardStats = cards.map((card) => {
-    const open = currentOpenInvoice(card.closing_day, card.due_day);
+    const invoice = invoiceForDueMonth(
+      targetMonth,
+      targetYear,
+      card.closing_day,
+      card.due_day,
+    );
     const cardTx = txs.filter((t) => t.credit_card_id === card.id);
     const invoiceTx = cardTx.filter((t) => {
       const d = new Date(t.occurred_at);
       return (
-        d >= open.periodStart && d <= open.closingDate && t.status !== "cancelado"
+        d >= invoice.periodStart &&
+        d <= invoice.closingDate &&
+        t.status !== "cancelado"
       );
     });
     const invoiceTotal = invoiceTx.reduce(
@@ -54,17 +93,19 @@ export default async function CartoesPage() {
     );
     const utilPct =
       card.credit_limit > 0 ? (invoiceTotal / card.credit_limit) * 100 : 0;
-    const daysToClose = daysUntil(open.closingDate);
-    const daysToDue = daysUntil(open.dueDate);
+    const daysToClose = daysUntil(invoice.closingDate, now);
+    const daysToDue = daysUntil(invoice.dueDate, now);
+    const isPaid = daysToDue < -3 && invoiceTx.length === 0;
 
     return {
       card,
-      open,
+      invoice,
       invoiceTx,
       invoiceTotal,
       utilPct,
       daysToClose,
       daysToDue,
+      isPaid,
     };
   });
 
@@ -72,16 +113,19 @@ export default async function CartoesPage() {
 
   return (
     <div className="space-y-5">
-      <div className="flex items-end justify-between gap-3">
+      <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <h2 className="text-xl font-semibold tracking-tight">
             Cartões de crédito
           </h2>
           <p className="text-sm text-muted-foreground">
-            Faturas em aberto e limites.
+            Faturas do período selecionado.
           </p>
         </div>
-        <CardDialog />
+        <div className="flex flex-wrap items-center gap-2">
+          <MonthNav month={targetMonth} year={targetYear} basePath="/cartoes" />
+          <CardDialog />
+        </div>
       </div>
 
       {/* Overview */}
@@ -104,9 +148,7 @@ export default async function CartoesPage() {
         </Card>
         <Card className="border-border/60">
           <CardContent className="p-4">
-            <div className="text-xs text-muted-foreground">
-              Em aberto agora
-            </div>
+            <div className="text-xs text-muted-foreground">Fatura do mês</div>
             <div className="mt-1 text-lg font-semibold tabular-nums text-danger">
               {formatCurrency(totalFaturas)}
             </div>
@@ -147,161 +189,175 @@ export default async function CartoesPage() {
           {cardStats.map(
             ({
               card,
-              open,
+              invoice,
               invoiceTx,
               invoiceTotal,
               utilPct,
               daysToClose,
               daysToDue,
-            }) => (
-              <Card
-                key={card.id}
-                className="overflow-hidden border-border/60"
-              >
-                {/* Topo colorido */}
-                <div
-                  className="relative px-5 pt-5 pb-4"
-                  style={{
-                    background: `linear-gradient(135deg, color-mix(in oklab, ${card.color} 35%, var(--card)), color-mix(in oklab, ${card.color} 10%, var(--card)))`,
-                  }}
+            }) => {
+              const isClosed = daysToClose <= 0;
+              const isDue = daysToDue <= 0;
+              return (
+                <Card
+                  key={card.id}
+                  className="overflow-hidden border-border/60"
                 >
-                  <div className="flex items-start justify-between gap-2">
-                    <div className="flex items-center gap-3">
-                      <div
-                        className="flex size-10 items-center justify-center rounded-xl text-white shadow-lg"
-                        style={{ backgroundColor: card.color }}
-                      >
-                        <CreditCardIcon className="size-5" />
-                      </div>
-                      <div>
-                        <div className="text-base font-semibold">
-                          {card.name}
-                        </div>
-                        <div className="text-xs text-muted-foreground">
-                          {card.brand ?? "Cartão"} · fecha dia{" "}
-                          {card.closing_day} · vence dia {card.due_day}
-                        </div>
-                      </div>
-                    </div>
-                    <div className="flex items-center gap-0">
-                      <EditCardButton card={card} />
-                      <DeleteButton
-                        confirmText={`Excluir cartão "${card.name}"? Transações vinculadas ficarão sem cartão.`}
-                        action={async () => {
-                          "use server";
-                          return await deleteCreditCard(card.id);
-                        }}
-                      />
-                    </div>
-                  </div>
-                </div>
-
-                <CardContent className="space-y-4 p-5">
-                  {/* Fatura */}
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between">
-                      <div className="text-xs text-muted-foreground">
-                        {open.label}
-                      </div>
-                      <Badge
-                        variant="outline"
-                        className="gap-1 text-[10px]"
-                      >
-                        <CalendarClock className="size-3" />
-                        {daysToClose > 0
-                          ? `fecha em ${daysToClose}d`
-                          : `fechou há ${Math.abs(daysToClose)}d`}
-                      </Badge>
-                    </div>
-                    <div className="text-2xl font-semibold tabular-nums text-danger">
-                      {formatCurrency(invoiceTotal)}
-                    </div>
-                    <div className="text-[11px] text-muted-foreground">
-                      Janela: {formatDate(open.periodStart)} →{" "}
-                      {formatDate(open.closingDate)} · vence em{" "}
-                      {formatDate(open.dueDate)} (
-                      {daysToDue > 0 ? `${daysToDue}d` : `há ${Math.abs(daysToDue)}d`}
-                      )
-                    </div>
-                  </div>
-
-                  {/* Utilização do limite */}
-                  {card.credit_limit > 0 && (
-                    <div className="space-y-1.5">
-                      <div className="flex items-center justify-between text-xs">
-                        <span className="text-muted-foreground">
-                          Utilização
-                        </span>
-                        <span className="font-medium tabular-nums">
-                          {formatCurrency(invoiceTotal)} /{" "}
-                          {formatCurrency(card.credit_limit)} ·{" "}
-                          {utilPct.toFixed(0)}%
-                        </span>
-                      </div>
-                      <div className="h-2 overflow-hidden rounded-full bg-muted">
+                  {/* Topo colorido */}
+                  <div
+                    className="relative px-5 pt-5 pb-4"
+                    style={{
+                      background: `linear-gradient(135deg, color-mix(in oklab, ${card.color} 35%, var(--card)), color-mix(in oklab, ${card.color} 10%, var(--card)))`,
+                    }}
+                  >
+                    <div className="flex items-start justify-between gap-2">
+                      <div className="flex items-center gap-3">
                         <div
-                          className={`h-full rounded-full transition-all ${
-                            utilPct > 90
-                              ? "bg-danger"
-                              : utilPct > 70
-                              ? "bg-warning"
-                              : "bg-primary"
-                          }`}
-                          style={{ width: `${Math.min(100, utilPct)}%` }}
+                          className="flex size-10 items-center justify-center rounded-xl text-white shadow-lg"
+                          style={{ backgroundColor: card.color }}
+                        >
+                          <CreditCardIcon className="size-5" />
+                        </div>
+                        <div>
+                          <div className="text-base font-semibold">
+                            {card.name}
+                          </div>
+                          <div className="text-xs text-muted-foreground">
+                            {card.brand ?? "Cartão"} · fecha dia{" "}
+                            {card.closing_day} · vence dia {card.due_day}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="flex items-center gap-0">
+                        <EditCardButton card={card} />
+                        <DeleteButton
+                          confirmText={`Excluir cartão "${card.name}"? Transações vinculadas ficarão sem cartão.`}
+                          action={async () => {
+                            "use server";
+                            return await deleteCreditCard(card.id);
+                          }}
                         />
                       </div>
-                      {utilPct > 90 && (
-                        <div className="flex items-center gap-1.5 text-[11px] text-danger">
-                          <AlertCircle className="size-3" />
-                          Limite quase estourado
+                    </div>
+                  </div>
+
+                  <CardContent className="space-y-4 p-5">
+                    {/* Fatura */}
+                    <div className="space-y-2">
+                      <div className="flex flex-wrap items-center justify-between gap-1">
+                        <div className="text-xs text-muted-foreground">
+                          {invoice.label}
                         </div>
+                        <div className="flex items-center gap-1">
+                          <Badge
+                            variant="outline"
+                            className="gap-1 text-[10px]"
+                          >
+                            <CalendarClock className="size-3" />
+                            {isClosed
+                              ? `fechou ${formatDate(invoice.closingDate)}`
+                              : `fecha em ${daysToClose}d`}
+                          </Badge>
+                        </div>
+                      </div>
+                      <div className="text-2xl font-semibold tabular-nums text-danger">
+                        {formatCurrency(invoiceTotal)}
+                      </div>
+                      <div className="text-[11px] text-muted-foreground">
+                        Janela: {formatDate(invoice.periodStart)} →{" "}
+                        {formatDate(invoice.closingDate)} ·{" "}
+                        {isDue
+                          ? `venceu em ${formatDate(invoice.dueDate)}`
+                          : `vence ${formatDate(invoice.dueDate)} (${daysToDue}d)`}
+                      </div>
+                    </div>
+
+                    {/* Utilização do limite */}
+                    {card.credit_limit > 0 && invoiceTotal > 0 && (
+                      <div className="space-y-1.5">
+                        <div className="flex items-center justify-between text-xs">
+                          <span className="text-muted-foreground">
+                            Utilização
+                          </span>
+                          <span className="font-medium tabular-nums">
+                            {formatCurrency(invoiceTotal)} /{" "}
+                            {formatCurrency(card.credit_limit)} ·{" "}
+                            {utilPct.toFixed(0)}%
+                          </span>
+                        </div>
+                        <div className="h-2 overflow-hidden rounded-full bg-muted">
+                          <div
+                            className={`h-full rounded-full transition-all ${
+                              utilPct > 90
+                                ? "bg-danger"
+                                : utilPct > 70
+                                ? "bg-warning"
+                                : "bg-primary"
+                            }`}
+                            style={{ width: `${Math.min(100, utilPct)}%` }}
+                          />
+                        </div>
+                        {utilPct > 90 && (
+                          <div className="flex items-center gap-1.5 text-[11px] text-danger">
+                            <AlertCircle className="size-3" />
+                            Limite quase estourado
+                          </div>
+                        )}
+                      </div>
+                    )}
+
+                    {/* Lançamentos */}
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-between text-xs">
+                        <span className="flex items-center gap-1.5 text-muted-foreground">
+                          <Receipt className="size-3" />
+                          Lançamentos da fatura ({invoiceTx.length})
+                        </span>
+                      </div>
+                      {invoiceTx.length === 0 ? (
+                        <div className="rounded-lg border border-dashed border-border/60 bg-muted/20 py-4 text-center text-xs text-muted-foreground">
+                          Nenhum lançamento nesta fatura.
+                        </div>
+                      ) : (
+                        <ul className="max-h-72 space-y-1 overflow-y-auto pr-1">
+                          {invoiceTx.map((t) => (
+                            <li
+                              key={t.id}
+                              className="flex items-center justify-between gap-2 rounded-md border border-border/40 bg-muted/20 px-2.5 py-1.5 text-xs"
+                            >
+                              <div className="flex min-w-0 items-center gap-2">
+                                {t.category ? (
+                                  <span
+                                    className="size-2 shrink-0 rounded-full"
+                                    style={{
+                                      backgroundColor: t.category.color,
+                                    }}
+                                  />
+                                ) : null}
+                                <div className="min-w-0">
+                                  <div className="truncate font-medium">
+                                    {t.description}
+                                  </div>
+                                  <div className="text-[10px] text-muted-foreground">
+                                    {formatDate(t.occurred_at)}
+                                    {t.category
+                                      ? ` · ${t.category.name}`
+                                      : ""}
+                                  </div>
+                                </div>
+                              </div>
+                              <div className="shrink-0 font-semibold tabular-nums">
+                                {formatCurrency(Number(t.amount))}
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
                       )}
                     </div>
-                  )}
-
-                  {/* Lançamentos */}
-                  <div className="space-y-2">
-                    <div className="flex items-center justify-between text-xs">
-                      <span className="flex items-center gap-1.5 text-muted-foreground">
-                        <Receipt className="size-3" />
-                        Lançamentos da fatura ({invoiceTx.length})
-                      </span>
-                    </div>
-                    {invoiceTx.length === 0 ? (
-                      <div className="rounded-lg border border-dashed border-border/60 bg-muted/20 py-4 text-center text-xs text-muted-foreground">
-                        Nenhum lançamento nesta fatura.
-                      </div>
-                    ) : (
-                      <ul className="max-h-48 space-y-1 overflow-y-auto pr-1">
-                        {invoiceTx.slice(0, 10).map((t) => (
-                          <li
-                            key={t.id}
-                            className="flex items-center justify-between gap-2 rounded-md border border-border/40 bg-muted/20 px-2.5 py-1.5 text-xs"
-                          >
-                            <div className="min-w-0">
-                              <div className="truncate font-medium">
-                                {t.description}
-                              </div>
-                              <div className="text-[10px] text-muted-foreground">
-                                {formatDate(t.occurred_at)}
-                              </div>
-                            </div>
-                            <div className="shrink-0 font-semibold tabular-nums">
-                              {formatCurrency(Number(t.amount))}
-                            </div>
-                          </li>
-                        ))}
-                        {invoiceTx.length > 10 && (
-                          <li className="text-center text-[10px] text-muted-foreground">
-                            + {invoiceTx.length - 10} lançamentos
-                          </li>
-                        )}
-                      </ul>
-                    )}
-                  </div>
-                </CardContent>
-              </Card>
-            ),
+                  </CardContent>
+                </Card>
+              );
+            },
           )}
         </div>
       )}

@@ -1,0 +1,322 @@
+
+=== PAGE 1 ===
+[66]Olá, Mateus Rodrigues! Sua fatura
+[66]com vencimento em Abril chegou
+[66]no valor de  [183]R$ 0,00  [264].
+[55]Data do vencimento:  [157]01 de Abril
+[55]Limite total:  [115]R$ 5.286,08
+[56]Sua fatura fechou com saldo positivo
+[56]O que isso significa? Pode ser que o pagamento de despesas no cartão de crédito tenha sido antecipado ou
+[56]algum valor tenha sido estornado. Importante: lembre-se de acompanhar os gastos nas próximas faturas para
+[56]não deixar nenhum pagamento em aberto.
+[41]1  [47]/  [52]10
+
+=== PAGE 2 ===
+[147]Vencimento:  [197]01 de Abril  [450]MATEUS NASCIMENTO
+[308]Débito automático:  [384]Desativado
+[147]Valor da fatura:  [208]R$ 0,00  [450]Cartão C6 Carbon
+[308]Anuidade:  [351]Isento
+[147]Melhor dia de compra:  [238]25
+[53]Pagamento de fatura
+[53]Confira as opções e detalhes de pagamento da sua fatura
+[53]1. Pagamento total  [162]Recomendado
+[494]R$ 0,00
+[53]3. Pagamento mínimo  [494]R$ 0,00
+[57]Composição do pagamento mínimo obrigatório  [306]Encargos da próx. fatura | Pgto mínimo obrigatório
+[306]Caso você realize o pgto mínimo obrigatório, seus encargos serão a partir de:
+[57]Gastos desta fatura  [251]R$ -284,23
+[306]Juros Rotativo  [445]14,50% a.m.  [489]419,36% a.a.
+[57]Saldo rotativo  [264]R$ 0,00
+[306]CET do financiamento  [446]15,13% a.m. 454,98% a.a.
+[57]Encargos do crédito rotativo  [264]R$ 0,00
+[306]Encargos e IOF do rotativo  [505]R$ 0,00
+[57]Encargos de atraso  [264]R$ 0,00
+[306]IOF do rotativo  [455]0,38% + 0,0082% (a.d)
+[57]Parcelamentos contratados  [254]R$ 284,23
+[57]Taxas  [264]R$ 0,00
+[57]IOF  [264]R$ 0,00
+[57]Pagamento mínimo obrigatório  [264]R$ 0,00
+[40]2  [47]/  [52]10
+
+=== PAGE 3 ===
+[147]Vencimento:  [197]01 de Abril  [450]MATEUS NASCIMENTO
+[308]Débito automático:  [384]Desativado
+[147]Valor da fatura:  [208]R$ 0,00  [450]Cartão C6 Carbon
+[308]Anuidade:  [351]Isento
+[147]Melhor dia de compra:  [238]25
+[53]Pagamento de fatura
+[53]Confira as opções e detalhes de pagamento da sua fatura
+[307]Não recomendado
+[56]4. Atrasar ou pagar menos que o mínimo da fatura
+[57]Ao pagar um valor menor que o mínimo, a fatura entra em atraso
+[57]Encargos cobrados nesta fatura em caso de atraso  [303]Encargos máximos para o próximo período (01/05)
+[57]Juros do rotativo  [212]14,50% a.  [253]419,36% a.  [303]Juros máximo do contrato  [490]22,50% a.m.
+[57]Juros de mora por atraso - % a.m.  [271]1,00%
+[303]Encargos do parcelamento pós-rotativo
+[303]Financiamento do pagamento mínimo obrigatório
+[57]Multa por atraso  [270]2,00%
+[303]Juros do financiamento pós-rotativo  [452]5,99% a.m.  [499]102,95% a.
+[57]IOF de financiamento - % a.m.  [207]0,38% + 0,0082% (a.d)
+[303]CET do financiamento  [452]6,62% a.m.  [500]118,23% a.
+[303]IOF do atraso  [453]0,38% + 0,0082% (a.d)
+[64]Atenção
+[55]Caso você não realize nenhuma das opções de pagamento apresentadas nesta fatura até a data do vencimento, e esteja
+[55]em atraso, você autoriza o C6 Bank, nos termos do contrato, a realizar o débito em sua conta no valor do pagamento
+[55]mínimo desta fatura, desde que haja saldo disponível. Dúvidas? Fale com a gente pelos nossos canais de atendimento.
+[40]3  [47]/  [52]10
+
+=== PAGE 4 ===
+[147]Vencimento:  [197]01 de Abril  [450]MATEUS NASCIMENTO
+[308]Débito automático:  [384]Desativado
+[147]Valor da fatura:  [208]R$ 0,00  [450]Cartão C6 Carbon
+[308]Anuidade:  [351]Isento
+[147]Melhor dia de compra:  [238]25
+[53]Pagamento da fatura
+[53]Detalhes sobre as opções de pagamento da sua fatura.
+[56]Pagamento mínimo da fatura  [241]Fatura com saldo positivo  [430]Parcelamento de fatura
+[37]Você pode pagar qualquer valor da fatura  [223]Em alguns casos, o pagamento de  [407]Se preferir, você também pode parcelar
+[37]entre o mínimo e o total. O mínimo,  [223]despesas no cartão de crédito pode ter  [407]o valor total da sua fatura pelo app do
+[37]equivalente a 15% do total da fatura, deve  [223]sido antecipado ou algum valor  [407]C6 Bank. O valor é dividido em entrada +
+[37]ser pago para evitar o atraso.  [223]estornado.Importante: acompanhe os  [407]parcelas fixas com juros e IOF. As
+[223]gastos nas próximas faturas para não  [407]condições de parcelamento estão
+[37]Ao escolher pagar o mínimo, a diferença  [223]deixar nenhum pagamento em aberto.  [407]disponíveis no app.
+[37]do valor será cobrada na fatura do mês
+[37]seguinte com juros do Crédito Rotativo e
+[430]Portabilidade de crédito
+[241]Antecipação de fatura
+[37]IOF.
+[407]É a transferência de uma operação de
+[223]Até a data de vencimento da sua fatura,
+[37]Caso você tenha contratado o Crédito
+[407]crédito de uma instituição financeira
+[223]você pode pagar antecipadamente
+[37]Rotativo em faturas anteriores ou tenha
+[407]para outra, com condições mais
+[223]qualquer valor pelo app do C6 Bank. O
+[37]contratado o Financiamento Pós-
+[407]vantajosas. Você pode solicitar a
+[223]valor pago antecipadamente é
+[37]Rotativo, se você pagar o valor mínimo da
+[407]portabilidade das operações de crédito
+[223]descontado do valor total da fatura
+[37]sua fatura atual, você quita o valor do
+[407]rotativo e parcelamentos da sua fatura
+[223]assim que ela fechar.
+[37]Crédito Rotativo do último período, bem
+[407]para outra instituição financeira. Acesse
+[37]como eventuais parcelas do
+[407]seu DDC (Documento Descritivo de
+[223]A antecipação é só referente aos valores
+[37]Financiamento Pós-Rotativo a vencer
+[407]Crédito) na área de Cartões no app,
+[223]lançados na sua fatura em aberto. Entre
+[37]nesta fatura, e contrata um crédito
+[407]tocando em Minha fatura, Informações
+[223]em contato com a Central de
+[37]rotativo sobre as novas compras que você
+[407]da Fatura e Meu crédito. Em caso de
+[223]Atendimento para antecipar compras
+[37]realizou.
+[407]dúvidas, consulte nossos canais de
+[223]parceladas.
+[407]atendimento.
+[36]Dúvidas frequentes
+[51]Quanto tempo leva para compensar o  [228]Posso antecipar o pagamento da  [407]Como faço para renegociar uma
+[51]pagamento da fatura?  [228]minha fatura?  [407]fatura em atraso?
+[51]Se o pagamento for feito pelo app do  [228]Você pode antecipar o pagamento  [406]Fale com a gente pelos nossos
+[51]C6 Bank, o limite é liberado em poucos  [228]pelo app do C6 Bank até a data de  [406]telefones (11) 2739-3003 (capitais e
+[51]minutos e a compensação pode levar  [228]corte da fatura.  [406]regiões metropolitanas) ou 0800-777-
+[51]até 24h. Já, se o pagamento for feito  [228]Em "Cartões", selecione a fatura, toque  [406]1150 (demais localidades).
+[51]por outros bancos, pode levar até 3  [228]em "Antecipar", selecione o valor que
+[51]dias úteis.  [228]quer antecipar e siga os próximos
+[228]passos.
+[37]Central de relacionamento 24h
+[40]CHAT PARA CLIENTES  [179]SAC
+[332]Débito Automático
+[40]No app do C6 Bank  [179]0800 660 0060
+[40]CAPITAIS E REGIÕES METROPOLITANAS  [179]OUVIDORIA: 9h ÀS 18h
+[310]Contratando o débito automático, você fica sempre em dia
+[179]SEGUNDA A SEXTA,
+[40]3003 6116
+[310]com o pagamento – sem multas ou encargos por atraso. No
+[179]EXCETO FERIADOS
+[40]DEMAIS LOCALIDADES  [179]0800 660 6060  [310]dia do vencimento, o débito é feito automaticamente na sua
+[40]0800 660 6116  [310]conta e você acompanha tudo pelo extrato no app.
+[40]WHATSAPP
+[40](11) 2832 6088
+[382]© 2022 BANCO C6 S.A. CNPJ: 31.872.495/0001-72
+[40]4  [47]/  [52]10
+
+=== PAGE 5 ===
+[147]Vencimento:  [197]01 de Abril  [450]MATEUS NASCIMENTO
+[308]Débito automático:  [384]Desativado
+[147]Valor da fatura:  [208]R$ 0,00  [450]Cartão C6 Carbon
+[308]Anuidade:  [351]Isento
+[147]Melhor dia de compra:  [238]25
+[53]Resumo da fatura
+[53]Compras e pagamentos feitos até o fechamento desta fatura em 24/03/26.
+[488]Valor em reais
+[40]Resumo da fatura
+[48]Compras nacionais  [511]5.677,08
+[48]Compras internacionais  [510]2.572,94
+[48]Anuidade diferenciada  [150]- Parcela 10/12  [524]98,00
+[48]Tarifa de saque  [530]0,00
+[48]Personalização de cartão físico adicional e/ou emissão de 2ª via  [530]0,00
+[48]IOF de financiamento e compras internacionais  [524]90,06
+[48]Juros de financiamento  [530]0,00
+[48]Juros de mora  [530]0,00
+[48]Multas por atraso  [530]0,00
+[48]Valor remanescente da fatura anterior  [530]0,00
+[40]Valores creditados  [489]Valor em reais
+[48]Estornos / Crédito na Fatura  [499](-) 1.924,45
+[48]Pagamento antecipado  [499](-) 8.408,51
+[48]Total a pagar  [502]R$ 0,00
+[48]Saldo obrigações futuras  [498]R$ 5.041,62
+[77]Limite de cartão
+[334]Limite de saque
+[62]Valores atualizados na data de fechamento da fatura
+[317]Valores atualizados na data de fechamento da fatura
+[62]Total  [149]Utilizado  [222]Disponível  [317]Total  [403]Utilizado  [478]Disponível
+[61]R$5.286,08
+[149]R$5.266,83  [221]R$19,25  [318]R$528,61  [402]R$0,00  [479]R$528,61
+[40]5  [47]/  [52]10
+
+=== PAGE 6 ===
+[147]Vencimento:  [197]01 de Abril  [450]MATEUS NASCIMENTO
+[308]Débito automático:  [384]Desativado
+[147]Valor da fatura:  [208]R$ 0,00  [450]Cartão C6 Carbon
+[308]Anuidade:  [351]Isento
+[147]Melhor dia de compra:  [238]25
+[53]Transações do cartão principal
+[53]Lembrando: nesta fatura serão lançadas apenas transações feitas até 24/03/26.
+[58]C6 Carbon Virtual Final 0009 - MATEUS RODRIGUES  [323]Cartão Virtual  [410]Subtotal deste cartão  [504]R$ -1.826,45
+[494]Valores em reais
+[60]21 fev  [100]AIRBNB * HM59E3NPNZ  [205]- Estorno  [518]1.826,45
+[58]C6 Carbon Final 6197 - MATEUS RODRIGUES  [427]Subtotal deste cartão  [521]R$ 70,63
+[60]24 jun  [100]MERCADO*MSSACESSORIOS  [224]- Parcela 9/10  [530]70,63
+[58]C6 Carbon Virtual Final 6698 - MATEUS RODRIGUES  [323]Cartão Virtual  [415]Subtotal deste cartão  [509]R$ 1.709,37
+[60]21 dez  [100]AIRBNB * HM8X93MWAA  [210]- Parcela 3/6  [526]418,49
+[60]21 dez  [100]AIRBNB * HM59E3NPNZ  [205]- Parcela 3/6  [524]304,40
+[60]21 dez  [100]AIRBNB * HMFBADPWCX  [208]- Parcela 3/6  [524]986,48
+[58]C6 Carbon Virtual Final 7221 - MATEUS RODRIGUES  [323]Cartão Virtual  [428]Subtotal deste cartão  [522]R$ 70,19
+[60]23 mai  [100]AMAZON BR  [155]- Parcela 10/10  [532]70,19
+[58]C6 Carbon Final 8024 - MATEUS RODRIGUES  [422]Subtotal deste cartão  [517]R$ 190,70
+[60]21 fev  [114]Inclusao de Pagamento  [518]1.009,63
+[60]27 fev  [100]APPLECOMBILL  [530]69,90
+[60]27 fev  [100]APPLECOMBILL  [530]53,90
+[40]6  [47]/  [52]10
+
+=== PAGE 7 ===
+[147]Vencimento:  [197]01 de Abril  [450]MATEUS NASCIMENTO
+[308]Débito automático:  [384]Desativado
+[147]Valor da fatura:  [208]R$ 0,00  [450]Cartão C6 Carbon
+[308]Anuidade:  [351]Isento
+[147]Melhor dia de compra:  [238]25
+[53]Transações do cartão principal
+[53]Lembrando: nesta fatura serão lançadas apenas transações feitas até 24/03/26.
+[494]Valores em reais
+[60]28 fev  [100]APPLECOMBILL  [530]66,90
+[60]09 mar  [114]Inclusao de Pagamento  [530]50,00
+[60]11 mar  [114]Inclusao de Pagamento  [526]150,00
+[60]12 mar  [114]Inclusao de Pagamento  [524]200,00
+[60]18 mar  [100]Estorno Tarifa  [164]- Estorno  [530]98,00
+[60]18 mar  [100]Anuidade Diferenciada  [200]- Parcela 10/12  [530]98,00
+[58]C6 Carbon Virtual Final 8500 - MATEUS RODRIGUES  [323]Cartão Virtual  [414]Subtotal deste cartão  [508]R$ 6.299,19
+[60]16 jan  [100]EC *FACINI  [149]- Parcela 3/5  [526]251,98
+[60]16 jan  [100]EC  [123]*MERCADOLIVRE  [198]- Parcela 3/5  [525]227,43
+[60]19 jan  [100]LATAM AIR*AUJKTL  [187]- Parcela 3/4  [525]558,47
+[60]04 fev  [100]AIRBNB * HMT4PFA2NH  [206]- Parcela 2/6  [528]111,42
+[60]20 fev  [100]SP HOLAFLY.COM  [198]DU  [370]IOF Transações Exterior  [533]16,21
+[370]USD 84,24 | Cotação USD: R$5,50
+[60]20 fev  [100]SP HOLAFLY.COM  [198]DU  [524]463,26
+[60]20 fev  [100]DROGASIL 4564  [526]149,56
+[60]20 fev  [100]HN HUDSON GUARULHOS  [530]40,70
+[60]21 fev  [100]AIRBNB * HMCFDJHWHD  [518]1.227,66
+[60]22 fev  [100]AMAZON PRIME CANAIS  [530]27,90
+[60]22 fev  [100]AMAZON AD FREE FOR PRI  [531]10,00
+[60]27 fev  [114]SWISS.COM  [526]561,06
+[40]7  [47]/  [52]10
+
+=== PAGE 8 ===
+[147]Vencimento:  [197]01 de Abril  [450]MATEUS NASCIMENTO
+[308]Débito automático:  [384]Desativado
+[147]Valor da fatura:  [208]R$ 0,00  [450]Cartão C6 Carbon
+[308]Anuidade:  [351]Isento
+[147]Melhor dia de compra:  [238]25
+[53]Transações do cartão principal
+[53]Lembrando: nesta fatura serão lançadas apenas transações feitas até 24/03/26.
+[494]Valores em reais
+[60]27 fev  [114]SWISS.COM  [526]561,06
+[60]27 fev  [100]EBN  [128]*CANVA04806 28  [530]35,00
+[60]28 fev  [100]IFD*IFOOD CLUB  [536]7,95
+[60]01 mar  [100]ITA SPA WEB SVIZZERA  [370]IOF Transações Exterior  [530]34,72
+[370]USD 183,03 | Cotação USD: R$5,42
+[60]01 mar  [100]ITA SPA WEB SVIZZERA  [526]991,88
+[60]02 mar  [100]RESTAURANT BRASSERIE J  [370]IOF Transações Exterior  [530]27,99
+[370]USD 147,55 | Cotação USD: R$5,42
+[60]02 mar  [100]RESTAURANT BRASSERIE J  [525]799,60
+[60]02 mar  [100]VERCEL  [174]CO  [370]IOF Transações Exterior  [537]2,01
+[370]USD 10,59 | Cotação USD: R$5,42
+[60]02 mar  [100]VERCEL  [174]CO  [530]57,39
+[60]05 mar  [100]VERCEL INC.  [182]CO  [370]IOF Transações Exterior  [536]0,38
+[370]USD 2,00 | Cotação USD: R$5,48
+[60]05 mar  [100]VERCEL INC.  [182]CO  [531]10,96
+[60]05 mar  [100]OPENAI *CHATGPT SUBSCR SA  [370]IOF Transações Exterior  [536]3,65
+[370]USD 19,04 | Cotação USD: R$5,48
+[60]05 mar  [100]OPENAI *CHATGPT SUBSCR SA  [526]104,38
+[60]05 mar  [100]ASAAS*DEVZAPP LTDA  [526]197,00
+[60]06 mar  [100]UBER UBER *TRIP HELP.U  [531]15,23
+[60]06 mar  [100]PAYPAL *TWITCHINTER  [209]40  [370]IOF Transações Exterior  [536]0,99
+[370]USD 5,11 | Cotação USD: R$5,52
+[60]06 mar  [100]PAYPAL *TWITCHINTER  [209]40  [530]28,20
+[60]07 mar  [100]FLAMBOYANT ESTACIONAME  [530]39,49
+[60]07 mar  [100]FLAMBOYANT ESTACIONAME  [530]39,49
+[60]07 mar  [100]UBER UBER *TRIP HELP.U  [530]33,94
+[60]07 mar  [100]CENCOSUD BRASIL  [532]17,63
+[40]8  [47]/  [52]10
+
+=== PAGE 9 ===
+[147]Vencimento:  [197]01 de Abril  [450]MATEUS NASCIMENTO
+[308]Débito automático:  [384]Desativado
+[147]Valor da fatura:  [208]R$ 0,00  [450]Cartão C6 Carbon
+[308]Anuidade:  [351]Isento
+[147]Melhor dia de compra:  [238]25
+[53]Transações do cartão principal
+[53]Lembrando: nesta fatura serão lançadas apenas transações feitas até 24/03/26.
+[494]Valores em reais
+[60]07 mar  [100]IFD*ARCOS DOURADOS COM  [530]59,88
+[60]08 mar  [100]IFD*FORMPAN INDUSTRIA  [530]59,89
+[60]08 mar  [100]IFD*FORMPAN INDUSTRIA  [530]59,89
+[60]08 mar  [100]IFD*MONT SERRAT ALIMEN  [526]100,83
+[60]08 mar  [100]ROOSTERSOLUCOES  [533]11,99
+[60]09 mar  [100]POSTO ALDEIA  [530]63,90
+[60]09 mar  [100]VALORI *BELLO PANE  [531]20,91
+[60]09 mar  [100]ROOSTERSOLUCOES  [531]12,49
+[60]10 mar  [100]ROOSTERSOLUCOES  [536]5,98
+[60]11 mar  [100]ROOSTERSOLUCOES  [533]11,99
+[60]11 mar  [100]ROOSTERSOLUCOES  [533]11,99
+[60]11 mar  [100]IFD*VARANDAS KANPAI AL  [527]102,10
+[60]11 mar  [100]ROOSTERSOLUCOES  [532]17,98
+[60]12 mar  [100]CENCOSUD BRASIL  [536]6,64
+[370]USD 10,46 | Cotação USD: R$5,43
+[60]12 mar  [100]CLOUDFLARE  [190]SA  [530]56,80
+[60]12 mar  [100]CLOUDFLARE  [190]SA  [370]IOF Transações Exterior  [537]1,99
+[60]12 mar  [100]AMAZON PRIME CANAIS  [531]19,90
+[60]13 mar  [100]VERCEL  [174]CO  [370]IOF Transações Exterior  [537]2,12
+[370]USD 11,04 | Cotação USD: R$5,48
+[60]13 mar  [100]VERCEL  [174]CO  [530]60,47
+[60]13 mar  [100]ROOSTERSOLUCOES  [536]8,99
+[60]14 mar  [100]CLARO FLEX  [530]59,99
+[40]9  [47]/  [52]10
+
+=== PAGE 10 ===
+[147]Vencimento:  [197]01 de Abril  [450]MATEUS NASCIMENTO
+[308]Débito automático:  [384]Desativado
+[147]Valor da fatura:  [208]R$ 0,00  [450]Cartão C6 Carbon
+[308]Anuidade:  [351]Isento
+[147]Melhor dia de compra:  [238]25
+[53]Transações do cartão principal
+[53]Lembrando: nesta fatura serão lançadas apenas transações feitas até 24/03/26.
+[494]Valores em reais
+[60]22 mar  [100]AMAZON AD FREE FOR PRI  [531]10,00
+[36]10  [47]/  [52]10

@@ -1,0 +1,1126 @@
+{
+  "c6": [
+    {
+      "date": "2025-06-24",
+      "description": "MERCADO*MSSACESSORIOS - Parcela 9/10",
+      "amount": 70.63,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2025-12-21",
+      "description": "AIRBNB * HM8X93MWAA - Parcela 3/6",
+      "amount": 418.49,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2025-12-21",
+      "description": "AIRBNB * HM59E3NPNZ - Parcela 3/6",
+      "amount": 304.4,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2025-12-21",
+      "description": "AIRBNB * HMFBADPWCX - Parcela 3/6",
+      "amount": 986.48,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2025-05-23",
+      "description": "AMAZON BR - Parcela 10/10",
+      "amount": 70.19,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-27",
+      "description": "APPLECOMBILL",
+      "amount": 69.9,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-27",
+      "description": "APPLECOMBILL",
+      "amount": 53.9,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-28",
+      "description": "APPLECOMBILL",
+      "amount": 66.9,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-18",
+      "description": "Anuidade Diferenciada - Parcela 10/12",
+      "amount": 98,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-01-16",
+      "description": "EC *FACINI - Parcela 3/5",
+      "amount": 251.98,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-01-16",
+      "description": "EC *MERCADOLIVRE - Parcela 3/5",
+      "amount": 227.43,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-01-19",
+      "description": "LATAM AIR*AUJKTL - Parcela 3/4",
+      "amount": 558.47,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-04",
+      "description": "AIRBNB * HMT4PFA2NH - Parcela 2/6",
+      "amount": 111.42,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-20",
+      "description": "SP HOLAFLY.COM DU",
+      "amount": 16.21,
+      "is_iof": true,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-20",
+      "description": "SP HOLAFLY.COM DU",
+      "amount": 463.26,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-20",
+      "description": "DROGASIL 4564",
+      "amount": 149.56,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-20",
+      "description": "HN HUDSON GUARULHOS",
+      "amount": 40.7,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-21",
+      "description": "AIRBNB * HMCFDJHWHD",
+      "amount": 1227.66,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-22",
+      "description": "AMAZON PRIME CANAIS",
+      "amount": 27.9,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-22",
+      "description": "AMAZON AD FREE FOR PRI",
+      "amount": 10,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-27",
+      "description": "SWISS.COM",
+      "amount": 561.06,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-27",
+      "description": "SWISS.COM",
+      "amount": 561.06,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-27",
+      "description": "EBN *CANVA04806 28",
+      "amount": 35,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-02-28",
+      "description": "IFD*IFOOD CLUB",
+      "amount": 7.95,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-01",
+      "description": "ITA SPA WEB SVIZZERA",
+      "amount": 34.72,
+      "is_iof": true,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-01",
+      "description": "ITA SPA WEB SVIZZERA",
+      "amount": 991.88,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-02",
+      "description": "RESTAURANT BRASSERIE J",
+      "amount": 27.99,
+      "is_iof": true,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-02",
+      "description": "RESTAURANT BRASSERIE J",
+      "amount": 799.6,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-02",
+      "description": "VERCEL CO",
+      "amount": 2.01,
+      "is_iof": true,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-02",
+      "description": "VERCEL CO",
+      "amount": 57.39,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-05",
+      "description": "VERCEL INC. CO",
+      "amount": 0.38,
+      "is_iof": true,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-05",
+      "description": "VERCEL INC. CO",
+      "amount": 10.96,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-05",
+      "description": "OPENAI *CHATGPT SUBSCR SA",
+      "amount": 3.65,
+      "is_iof": true,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-05",
+      "description": "OPENAI *CHATGPT SUBSCR SA",
+      "amount": 104.38,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-05",
+      "description": "ASAAS*DEVZAPP LTDA",
+      "amount": 197,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-06",
+      "description": "UBER UBER *TRIP HELP.U",
+      "amount": 15.23,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-06",
+      "description": "PAYPAL *TWITCHINTER 40",
+      "amount": 0.99,
+      "is_iof": true,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-06",
+      "description": "PAYPAL *TWITCHINTER 40",
+      "amount": 28.2,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-07",
+      "description": "FLAMBOYANT ESTACIONAME",
+      "amount": 39.49,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-07",
+      "description": "FLAMBOYANT ESTACIONAME",
+      "amount": 39.49,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-07",
+      "description": "UBER UBER *TRIP HELP.U",
+      "amount": 33.94,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-07",
+      "description": "CENCOSUD BRASIL",
+      "amount": 17.63,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-07",
+      "description": "IFD*ARCOS DOURADOS COM",
+      "amount": 59.88,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-08",
+      "description": "IFD*FORMPAN INDUSTRIA",
+      "amount": 59.89,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-08",
+      "description": "IFD*FORMPAN INDUSTRIA",
+      "amount": 59.89,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-08",
+      "description": "IFD*MONT SERRAT ALIMEN",
+      "amount": 100.83,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-08",
+      "description": "ROOSTERSOLUCOES",
+      "amount": 11.99,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-09",
+      "description": "POSTO ALDEIA",
+      "amount": 63.9,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-09",
+      "description": "VALORI *BELLO PANE",
+      "amount": 20.91,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-09",
+      "description": "ROOSTERSOLUCOES",
+      "amount": 12.49,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-10",
+      "description": "ROOSTERSOLUCOES",
+      "amount": 5.98,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-11",
+      "description": "ROOSTERSOLUCOES",
+      "amount": 11.99,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-11",
+      "description": "ROOSTERSOLUCOES",
+      "amount": 11.99,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-11",
+      "description": "IFD*VARANDAS KANPAI AL",
+      "amount": 102.1,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-11",
+      "description": "ROOSTERSOLUCOES",
+      "amount": 17.98,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-12",
+      "description": "CENCOSUD BRASIL",
+      "amount": 6.64,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-12",
+      "description": "CLOUDFLARE SA",
+      "amount": 56.8,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-12",
+      "description": "CLOUDFLARE SA",
+      "amount": 1.99,
+      "is_iof": true,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-12",
+      "description": "AMAZON PRIME CANAIS",
+      "amount": 19.9,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-13",
+      "description": "VERCEL CO",
+      "amount": 2.12,
+      "is_iof": true,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-13",
+      "description": "VERCEL CO",
+      "amount": 60.47,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-13",
+      "description": "ROOSTERSOLUCOES",
+      "amount": 8.99,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-14",
+      "description": "CLARO FLEX",
+      "amount": 59.99,
+      "is_iof": false,
+      "card": "C6"
+    },
+    {
+      "date": "2026-03-22",
+      "description": "AMAZON AD FREE FOR PRI",
+      "amount": 10,
+      "is_iof": false,
+      "card": "C6"
+    }
+  ],
+  "inter": [
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 388.5,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 15.54,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 15.54,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 23.31,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 7.77,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 23.31,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 23.31,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 23.31,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 31.08,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 388.5,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 15.54,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-17",
+      "description": "COMPRA SHOPPING INTER",
+      "amount": 38.85,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2025-07-07",
+      "description": "CPP ARC SHOPPING INTER (Parcela 10 de 10)",
+      "amount": 190.4,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-14",
+      "description": "KabanasFlamboyant",
+      "amount": 678.61,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-14",
+      "description": "FLAMBOYANT ESTACIONAME",
+      "amount": 31.6,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-14",
+      "description": "DROGARIA SAOP AULO SA",
+      "amount": 57.17,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-15",
+      "description": "RoosterSolucoes",
+      "amount": 17.78,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-15",
+      "description": "RoosterSolucoes",
+      "amount": 31.74,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-15",
+      "description": "VERCEL",
+      "amount": 58.42,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-15",
+      "description": "IFD*Madalena Gastrobar",
+      "amount": 114,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-15",
+      "description": "CENCOSUD BRASIL",
+      "amount": 22.2,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-16",
+      "description": "IOF INTERNACIONAL",
+      "amount": 2.04,
+      "is_iof": true,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-19",
+      "description": "Uber UBER *TRIP HELP.U",
+      "amount": 31.97,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-20",
+      "description": "BONATACAREJO DE ALIMEN",
+      "amount": 47.99,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-20",
+      "description": "Uber UBER *TRIP HELP.U",
+      "amount": 10.98,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-20",
+      "description": "JACOSTE (Parcela 01 de 03)",
+      "amount": 665,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-20",
+      "description": "DundeeRoasted",
+      "amount": 185,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-21",
+      "description": "Uber UBER *TRIP HELP.U",
+      "amount": 20,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-21",
+      "description": "IFD*TOWER BURGER LTDA",
+      "amount": 98.46,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-22",
+      "description": "SUPERBOXMINIMERCA",
+      "amount": 57.98,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-22",
+      "description": "Disney Plus",
+      "amount": 19.9,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-23",
+      "description": "DROGASIL 4564",
+      "amount": 20.89,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-23",
+      "description": "PG *GAMERS CLUB LTDA",
+      "amount": 21.9,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-24",
+      "description": "XSOLLA",
+      "amount": 41.69,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-25",
+      "description": "IOF INTERNACIONAL",
+      "amount": 1.46,
+      "is_iof": true,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-25",
+      "description": "SeuDori",
+      "amount": 354.86,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-26",
+      "description": "RoosterSolucoes",
+      "amount": 9.98,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-26",
+      "description": "RoosterSolucoes",
+      "amount": 11.99,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-26",
+      "description": "Uber UBER *TRIP HELP.U",
+      "amount": 26.94,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-27",
+      "description": "VERCEL INC.",
+      "amount": 109.98,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-28",
+      "description": "NOSTRA PIZZERIA",
+      "amount": 255.27,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-28",
+      "description": "RoosterSolucoes",
+      "amount": 5.99,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-28",
+      "description": "Uber UBER *TRIP HELP.U",
+      "amount": 0.8,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-28",
+      "description": "REDEZ Z",
+      "amount": 66.9,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-28",
+      "description": "IFD*BURGER CHEF LTDA",
+      "amount": 135.58,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-03-29",
+      "description": "IOF INTERNACIONAL",
+      "amount": 3.85,
+      "is_iof": true,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-04-01",
+      "description": "VERCEL",
+      "amount": 111.1,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-04-01",
+      "description": "EBN *Canva04834 25",
+      "amount": 35,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-04-04",
+      "description": "IOF INTERNACIONAL",
+      "amount": 3.89,
+      "is_iof": true,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-04-04",
+      "description": "MP *MONTECARLO",
+      "amount": 30,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-04-04",
+      "description": "REDEZ Z",
+      "amount": 59.9,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-04-05",
+      "description": "FLAMBOYANT ESTACIONAME",
+      "amount": 33,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-04-06",
+      "description": "SUPERBOXMINIMERCA",
+      "amount": 46.19,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-04-07",
+      "description": "Uber UBER *TRIP HELP.U",
+      "amount": 14.98,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2026-04-07",
+      "description": "Uber UBER *TRIP HELP.U",
+      "amount": 51.98,
+      "is_iof": false,
+      "card": "Inter"
+    },
+    {
+      "date": "2025-12-15",
+      "description": "ita air*ZB3VZH4473728 (Parcela 04 de 06)",
+      "amount": 1253.42,
+      "is_iof": false,
+      "card": "Inter"
+    }
+  ]
+}

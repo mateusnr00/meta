@@ -1,0 +1,435 @@
+
+=== PAGE 1 ===
+[336]Resumo da fatura
+[24]Olá,  [49]Mateus  [94]! A sua fatura chegou!
+[329]Limite de crédito total
+[52]Total da sua fatura
+[329]R$  [341]6.750,00
+[52]R$  [81]2.511,44
+[329]Data de Vencimento
+[329]15/04/2026
+[52]Este é o valor que você precisa pagar nesse mês
+[24]Pagamento mínimo:  [122]R$  [138]381,23
+[24]O pagamento mínimo é o valor que você precisa pagar nesse mês para não ficar em atraso com a fatura.
+[24]A diferença será cobrada com juros e impostos na próxima fatura.
+[30]Encargos em caso de pagamento mínimo desta fatura
+[36]Pagamento mínimo:  [98]R$  [107]381,23  [235]Em caso de pagamento mínimo o valor financiado será:
+[36]Encargos rotativos  [179]17,90  [194]% am  [235]Valor total financiado  [377]R$  [386]2.130,21
+[235]Total a pagar em encargos e IOF do
+[36]IOF diário  [177]0,246  [194]% am  [381]R$  [390]412,53
+[235]rotativo
+[36]IOF adicional  [177]0,380  [194]% am  [235]Total a pagar  [373]R$  [382]2.542,74
+[24]Pagamento via Boleto  [283]Pagamento via Pix
+[24]Caso o pagamento da fatura seja feito via boleto, o prazo para  [283]Faça o pagamento pela conta do Inter ou via
+[24]reconhecimento do pagamento e liberação do limite é de até 3 dias úteis.  [283]Pix. Escaneie o QR Code abaixo para pagar a
+[283]fatura. Seu limite será liberado em até 24h.
+[24]07790.00116 01001.305299 88951.828701 7 00000000000000
+[24]AUTENTICAÇÃO MECÂNICA FICHA DE COMPENSAÇÃO
+
+=== PAGE 2 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[24]Precisa de uma força para pagar a fatura deste mês?
+[24]Confira as opções de parcelamento disponíveis pra você.
+[32]Parcelamento  [144]Total  [249]Parcelamento  [362]Total
+[32]1 + 2  [46]de R$  [64]940,52  [137]R$  [146]2.821,56  [249]1 + 8  [264]de R$  [282]431,87  [354]R$  [363]3.886,83
+[32]1 + 3  [46]de R$  [64]746,30  [137]R$  [146]2.985,20  [249]1 + 9  [264]de R$  [282]408,31  [354]R$  [363]4.083,10
+[32]1 + 4  [46]de R$  [64]630,91  [137]R$  [146]3.154,55  [249]1 + 10  [266]de R$  [284]389,49  [354]R$  [363]4.284,39
+[32]1 + 5  [46]de R$  [64]554,91  [137]R$  [146]3.329,46  [249]1 + 11  [264]de R$  [282]374,21  [354]R$  [363]4.490,52
+[32]1 + 6  [46]de R$  [64]501,41  [137]R$  [146]3.509,87  [249]1 + 12  [266]de R$  [284]361,65  [354]R$  [363]4.701,45
+[32]1 + 7  [46]de R$  [64]461,97  [137]R$  [146]3.695,76
+[24]O IOF e juros, com Taxa Efetiva Mensal de 11,90% am e Taxa Efetiva Anual de 285,44% aa já estão incluídas no valor total
+[24]do parcelamento, podendo as taxas serem menores a depender do perfil do cliente disponíveis.
+[24]Caso opte pelo parcelamento, é importante saber:
+[35]É necessário  [77]realizar um pagamento único, correspondendo exatamente ao valor da parcela desejada, até a data de
+[35]vencimento.
+[35]Após a data de vencimento, você poderá visualizar o parcelamento contratado em nosso aplicativo.
+[35]Não será possível receber os pontos Loop correspondentes à fatura parcelada.
+[35]Caso tenha Débito Automático ativo, será preciso desabilitá-lo em até 1 dia útil antes do vencimento da fatura e cancelar
+[35]o próximo agendamento programado.
+[24]Você pode acessar sua fatura no Super App e fazer uma simulação em "Parcelar fatura".
+[24]Para mais detalhes sobre o parcelamento e encargos envolvidos,  [234]clique aqui  [268].
+[55]DESPESAS DO MÊS  [197]VALOR ANTECIPADO  [347]FATURA ATUAL
+[58]R$  [70]7.473,02  [201]R$  [213]4.961,58  [345]R$  [357]2.511,44
+[40]Essa é a soma de todas as suas  [177]Esse é o valor que você antecipou no  [319]Esse é o valor que você precisa pagar
+[44]despesas durante esse mês.  [206]mês passado.  [353]nesse mês
+[30]Descritivo detalhado
+[30]Despesas do mês  [381]R$  [390]7.473,02
+[42]Valor total de juros e encargos  [393]R$  [402]11,24
+[30]Valor antecipado  [382]R$  [391]4.961,58
+[30]Fatura atual  [383]R$  [392]2.511,44
+
+=== PAGE 3 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[18]Despesas da fatura
+[24]CARTÃO  [55]5364****4624
+[24]Data  [75]Movimentação  [282]Beneficiário  [404]Valor
+[24]14 de mar. 2026  [77]P  [80]AGAMENTO ON LINE  [300]-  [385]+ R$ 2.792,00
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [394]R$ 388,50
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [388]+ R$ 388,50
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+
+=== PAGE 4 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[18]Despesas da fatura
+[24]CARTÃO  [55]5364****4624
+[24]Data  [75]Movimentação  [282]Beneficiário  [404]Valor
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [394]+ R$ 23,31
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [394]+ R$ 15,54
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [388]+ R$ 388,50
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [400]R$ 15,54
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+
+=== PAGE 5 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[18]Despesas da fatura
+[24]CARTÃO  [55]5364****4624
+[24]Data  [75]Movimentação  [282]Beneficiário  [404]Valor
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [394]+ R$ 15,54
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [394]+ R$ 15,54
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [400]R$ 15,54
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [399]R$ 23,31
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+
+=== PAGE 6 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[18]Despesas da fatura
+[24]CARTÃO  [55]5364****4624
+[24]Data  [75]Movimentação  [282]Beneficiário  [404]Valor
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [403]R$ 7,77
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [399]R$ 23,31
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [394]+ R$ 23,31
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [399]R$ 23,31
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+
+=== PAGE 7 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[18]Despesas da fatura
+[24]CARTÃO  [55]5364****4624
+[24]Data  [75]Movimentação  [282]Beneficiário  [404]Valor
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [393]+ R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [399]R$ 23,31
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [394]+ R$ 23,31
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [398]R$ 31,08
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [394]R$ 388,50
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [398]+ R$ 7,77
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [392]+ R$ 38,85
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]17 de mar. 2026  [77]EST COMPRA SHOP INTER  [300]-  [394]+ R$ 23,31
+
+=== PAGE 8 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[18]Despesas da fatura
+[24]CARTÃO  [55]5364****4624
+[24]Data  [75]Movimentação  [282]Beneficiário  [404]Valor
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [400]R$ 15,54
+[24]17 de mar. 2026  [77]COMPRA SHOPPING INTER  [300]-  [397]R$ 38,85
+[24]20 de mar. 2026  [77]P  [80]AGAMENTO ON LINE  [300]-  [384]+ R$ 2.832,60
+[24]Total CARTÃO  [61]5364****4624  [390]R$  [399]2.424,24
+[24]CARTÃO  [55]5361****8568
+[24]Data  [75]Movimentação  [282]Beneficiário  [404]Valor
+[24]07 de jul. 2025  [77]CP P  [88]ARC SHOPPING INTER  [145](Parcela 10 de 10)  [300]-  [394]R$ 190,40
+[24]Total CARTÃO  [61]5361****8568  [394]R$  [403]190,40
+[24]CARTÃO  [55]5364****5204
+[24]Data  [75]Movimentação  [282]Beneficiário  [404]Valor
+[24]14 de mar. 2026  [77]KabanasFlamboyant  [300]-  [395]R$ 678,61
+[24]14 de mar. 2026  [77]FLAMBOYANT ESTACIONAME  [300]-  [398]R$ 31,60
+[24]14 de mar. 2026  [77]DROGARIA SAO P  [121]AULO SA  [300]-  [402]R$ 57,17
+[24]15 de mar. 2026  [77]RoosterSolucoes  [300]-  [400]R$ 17,78
+[24]15 de mar. 2026  [77]RoosterSolucoes  [300]-  [399]R$ 31,74
+
+=== PAGE 9 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[18]Despesas da fatura
+[24]CARTÃO  [55]5364****5204
+[24]Data  [75]Movimentação  [282]Beneficiário  [404]Valor
+[24]15 de mar. 2026  [77]VERCEL  [300]-  [398]R$ 58,42
+[77]Valor e símbolo da moeda de origem:  [171]10,59  [185]USD
+[77]Valor em dólar americano: $  [149]10,59
+[77]Cotação do dólar americano: R$  [158]5,5163
+[24]15 de mar. 2026  [77]IFD*Madalena Gastrobar  [300]-  [396]R$ 114,00
+[24]15 de mar. 2026  [77]CENCOSUD BRASIL  [300]-  [399]R$ 22,20
+[24]16 de mar. 2026  [77]IOF INTERNACIONAL  [300]-  [401]R$ 2,04
+[24]19 de mar. 2026  [77]Uber UBER *TRIP HELP.U  [300]-  [399]R$ 31,97
+[24]20 de mar. 2026  [77]BONATACAREJO DE ALIMEN  [300]-  [398]R$ 47,99
+[24]20 de mar. 2026  [77]Uber UBER *TRIP HELP.U  [300]-  [398]R$ 10,98
+[24]20 de mar. 2026  [77]JACOSTE  [103](Parcela 01 de 03)  [300]-  [394]R$ 665,00
+[24]20 de mar. 2026  [77]DundeeRoasted  [300]-  [395]R$ 185,00
+[24]21 de mar. 2026  [77]Uber UBER *TRIP HELP.U  [300]-  [397]R$ 20,00
+[24]21 de mar. 2026  [77]IFD*TOWER BURGER LTDA  [300]-  [397]R$ 98,46
+[24]22 de mar. 2026  [77]SUPERBOXMINIMERCA  [300]-  [399]R$ 57,98
+[24]22 de mar. 2026  [77]Disney Plus  [300]-  [398]R$ 19,90
+[24]23 de mar. 2026  [77]DROGASIL 4564  [300]-  [397]R$ 20,89
+[24]23 de mar. 2026  [77]PG *GAMERS CLUB LTDA  [300]-  [399]R$ 21,90
+
+=== PAGE 10 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[18]Despesas da fatura
+[24]CARTÃO  [55]5364****5204
+[24]Data  [75]Movimentação  [282]Beneficiário  [404]Valor
+[24]24 de mar. 2026  [77]XSOLLA  [300]-  [398]R$ 41,69
+[77]Valor e símbolo da moeda de origem:  [171]7,55  [182]USD
+[77]Valor em dólar americano: $  [149]7,55
+[77]Cotação do dólar americano: R$  [158]5,5224
+[24]25 de mar. 2026  [77]IOF INTERNACIONAL  [300]-  [402]R$ 1,46
+[24]25 de mar. 2026  [77]SeuDori  [300]-  [394]R$ 354,86
+[24]26 de mar. 2026  [77]RoosterSolucoes  [300]-  [400]R$ 9,98
+[24]26 de mar. 2026  [77]RoosterSolucoes  [300]-  [400]R$ 11,99
+[24]26 de mar. 2026  [77]Uber UBER *TRIP HELP.U  [300]-  [397]R$ 26,94
+[24]27 de mar. 2026  [77]VERCEL INC.  [300]-  [394]R$ 109,98
+[77]Valor e símbolo da moeda de origem:  [171]20,00  [186]USD
+[77]Valor em dólar americano: $  [149]20,00
+[77]Cotação do dólar americano: R$  [158]5,4990
+[24]28 de mar. 2026  [77]NOSTRA PIZZERIA  [300]-  [397]R$ 255,27
+[24]28 de mar. 2026  [77]RoosterSolucoes  [300]-  [401]R$ 5,99
+[24]28 de mar. 2026  [77]Uber UBER *TRIP HELP.U  [300]-  [400]R$ 0,80
+[24]28 de mar. 2026  [77]REDE Z Z  [300]-  [397]R$ 66,90
+[24]28 de mar. 2026  [77]IFD*BURGER CHEF LTDA  [300]-  [396]R$ 135,58
+[24]29 de mar. 2026  [77]IOF INTERNACIONAL  [300]-  [401]R$ 3,85
+[24]01 de abr. 2026  [77]VERCEL  [300]-  [400]R$ 111,10
+[24]01 de abr. 2026  [77]EBN *Canva04834 25  [300]-  [397]R$ 35,00
+[24]04 de abr. 2026  [77]IOF INTERNACIONAL  [300]-  [400]R$ 3,89
+
+=== PAGE 11 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[18]Despesas da fatura
+[24]CARTÃO  [55]5364****5204
+[24]Data  [75]Movimentação  [282]Beneficiário  [404]Valor
+[24]04 de abr. 2026  [77]MP *MONTECARLO  [300]-  [397]R$ 30,00
+[24]04 de abr. 2026  [77]REDE Z Z  [300]-  [397]R$ 59,90
+[24]05 de abr. 2026  [77]FLAMBOYANT ESTACIONAME  [300]-  [397]R$ 33,00
+[24]06 de abr. 2026  [77]SUPERBOXMINIMERCA  [300]-  [399]R$ 46,19
+[24]07 de abr. 2026  [77]Uber UBER *TRIP HELP.U  [300]-  [398]R$ 14,98
+[24]07 de abr. 2026  [77]Uber UBER *TRIP HELP.U  [300]-  [399]R$ 51,98
+[24]Total CARTÃO  [61]5364****5204  [388]R$  [397]3.604,96
+[24]CARTÃO  [55]5554****6863
+[24]Data  [75]Movimentação  [282]Beneficiário  [404]Valor
+[24]15 de dez. 2025  [77]ita air*ZB3VZH4473728  [139](Parcela 04 de 06)  [300]-  [391]R$ 1.253,42
+[24]Total CARTÃO  [61]5554****6863  [391]R$  [400]1.253,42
+
+=== PAGE 12 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[237]Próxima fatura
+[33]Limite de crédito total:
+[237]Data de corte:  [285]08/05/2026
+[33]R$  [49]6.750,00
+[237]Essas são as  [281]compras parceladas  [350]realizadas até o
+[33]Os valores dos limites são referentes ao valor
+[237]fechamento da fatura atual, e que farão parte da sua
+[33]utilizado e disponível no momento de fechamento  [237]próxima fatura:
+[33]da fatura.
+[243]Movimentação  [405]Valor
+[243]ita air*ZB3VZH4473728  [314](Parcela 05 de
+[33]Utilizado:  [98]Disponível:
+[388]R$  [397]1.253,42
+[243]06)
+[33]R$  [45]6.348,28  [98]R$  [110]401,72
+[243]JACOSTE  [273](Parcela 02 de 03)  [392]R$  [401]665,00
+[243]Saldo total de compras parceladas  [389]R$  [398]1.918,42
+[33]Como está distribuído o seu limite de crédito por
+[33]produto?
+[243]Saldo demais compras parceladas  [389]R$  [398]1.918,42
+[33]Pix no crédito
+[243]Saldo em aberto total  [386]R$  [395]3.836,84
+[33]Utilizado:  [81]Disponível:
+[33]R$  [45]0,00  [81]R$  [93]129,03
+[33]Boleto no crédito
+[33]Utilizado:  [81]Disponível:
+[33]R$  [45]0,00  [81]R$  [93]129,03
+[33]Saque
+[33]Utilizado:  [81]Disponível:
+[33]R$  [45]0,00  [81]R$  [93]129,03
+[24]Fale com a gente
+[24]Capitais e regiões metropolitanas:  [146]3003 4070  [232]Ouvidoria:  [271]0800 940 7772
+[24]Demais localidades:  [97]0800 940 0007  [232]SAC:  [252]0800 940 9999
+[24]Fale com a gente pelo chat, no nosso Super App, ou  [232]Deficiência de fala e audição:
+[24]acesse:  [54]www.bancointer.com.br  [232]https://inter.co/atendimento-em-libras/
+
+=== PAGE 13 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[24]1. Pagamento total
+[24]Esta é a melhor escolha! Com o pagamento total você quita todo o saldo da sua fatura, libera o mesmo valor no seu limite
+[24]de crédito e não há cobrança de juros.
+[24]Você ainda pode colocar sua fatura em débito automático na sua conta digital. Assim, você não precisa se preocupar com o
+[24]pagamento, que é realizado de forma automática no valor total da fatura e dia de vencimento.
+[24]É importante lembrar: com o débito automático, é preciso ter o saldo adequado em conta no dia vencimento da fatura, para
+[24]que o débito do valor seja realizado.
+[24]2. Pagamento parcial
+[24]Nesta opção, o pagamento realizado deve ser igual ou acima do pagamento mínimo. O saldo restante da sua fatura será
+[24]carregado para o próximo mês e sofrerá cobrança de encargos financeiros juros, pois você estará financiando o valor pelo
+[24]crédito rotativo.
+[24]Se você preferir pagar sua fatura com mais tranquilidade, as opções de parcelamento do saldo podem ser mais adequadas
+[24]à sua capacidade financeira de pagamento. Para parcelar sua fatura, escolha uma das opções oferecidas e pague o valor
+[24]exato da parcela, incluindo os centavos, até a data do vencimento.
+[24]As opções de planos de parcelamento incluem apenas o valor total da fatura que está sendo parcelada. Possíveis
+[24]transações futuras serão lançadas normalmente em suas próximas faturas, compondo um novo valor a pagar.
+[24]Lembre-se: o valor total do plano escolhido irá impactar seu limite de crédito. À medida que as parcelas forem quitadas, o
+[24]valor proporcional será liberado para sua utilização. Se você tem o pagamento em Débito Automático (DA) ativo e quer
+[24]aderir ao parcelamento da fatura, é preciso desabilitar o DA em até 1 dia útil antes do vencimento da fatura. Também é
+[24]necessário cancelar o próximo agendamento programado do DA.
+[24]Desativando o Débito Automático da fatura
+[24]No Super App, acesse a área de Cartões, vá em Configurações, clique em Débito Automático em Conta e em Desativar
+[24]Débito Automático.
+[24]Cancelando o Agendamento
+[24]No o Super App, acesse o menu Agendamentos, selecione o próximo pagamento agendado da fatura e deslize para
+[24]cancelar.
+[24]Lembre-se: ao desativar o débito automático, você deixará de receber pontos no Inter Loop pelo uso do seu cartão de
+[24]crédito.
+[24]3. Ausência de pagamento, pagamento abaixo do valor mínimo da fatura e pagamento em
+[24]atraso
+[24]Nestas situações, você estará inadimplente e seu cartão será bloqueado até a normalização do pagamento.
+[24]O saldo não pago será carregado para o próximo mês e acrescidos de i) IOF e juros remuneratórios, ii) multa de atraso de
+[24]2% sobre o saldo não pago e iii) juros moratórios de 1% ao mês, capitalizados diariamente a partir da data de vencimento
+[24]até a data de pagamento.
+[24]De acordo com a Resolução nº 4.549/2017 do Banco Central do Brasil saldo devedor não pode utilizar o crédito rotativo por
+[24]mais de 30 dias.
+[24]Caso isto ocorra, o parcelamento é realizado automaticamente em até 15 parcelas, com a aplicação de juros remuneratórios.
+[24]O parcelamento compulsório é fundamental para garantir as suas condições de crédito. O valor do plano do parcelamento
+[24]compulsório irá impactar seu limite de crédito e, à medida que as parcelas forem quitadas, o valor proporcional será
+[24]liberado para sua utilização.
+[24]Você pode realizar a quitação total do saldo parcelado compulsoriamente a qualquer momento. Basta entrar em contato por
+[24]meio dos nossos Canais de Relacionamento e solicitar a antecipação do plano para quitação.
+
+=== PAGE 14 ===
+[209]MATEUS NASCIMENTO RODRIGUES
+[256]5364****4624  [328]15/04/2026  [387]R$  [396]2.511,44
+[25]Encargos financeiros
+[25]Encargos  [407]Taxa
+[25]Encargos rotativos  [394]17,90  [407]% am
+[25]Encargos Máximo Próximo Período  [392]19,00  [407]% am
+[25]Juros de Parcelamento de Fatura  [393]12,90  [407]% am
+[25]Multa por Atraso  [395]2,00  [407]% am
+[25]Juros de mora  [396]1,00  [407]% am
+[25]IOF de Financiamento  [331]0,626  [347]% sobre o valor da transação
+[25]IOF Internacional  [395]3,50  [407]% am
+[22]Atenção:  [46]Caso o pagamento realizado seja menor que o valor total dessa fatura, a fatura do próximo mês virá com juros e encargos, calculados sobre a
+[22]diferença entre o valor total e o valor pago.
+[255]Caso o pagamento da fatura seja feito em outra
+[255]instituição financeira  [317], o prazo para
+[62]Faça um Pix. Use esse QR Code para pagar sua fatura.
+[255]reconhecimento do pagamento e liberação do
+[62]Seu limite será liberado em até 24h.
+[255]limite é de  [286]até 3 dias úteis.
+[242]07790.00116 01001.305299 88951.828701 7 00000000000000
+[178]077-9
+[110]LOCAL DE PAGAMENTO  [346]VENCIMENTO
+[113]PAGAVEL EM QUALQUER BANCO,  [203]MESMO APOS O VENCIMENTO  [389]15/04/2026
+[27]AGÊNCIA / CEDENTE
+[49]00001/00000027
+[110]BENEFICIÁRIO  [154]BANCO INTER S/A CNPJ: 00.416.968\0001-01  [346]AGÊNCIA / CEDENTE
+[27]ESPÉCIE  [154]AV BARBACENA 1219 STO AGOSTINHO 30190131
+[371]00001/00000027
+[89]R$
+[110]DATA DOCUMENTO  [163]Nº DOCUMENTO  [217]ESPÉCIE DOC.  [258]ACEITE  [283]DATA PROCESSAMENTO  [346]NOSSO NÚMERO
+[27]VALOR DO DOCUMENTO
+[119]08/04/2026  [171]04350377140  [224]OUTROS  [258]N  [298]08/04/2026  [386]98895182870
+[76]2.511,44
+[110]USO DO BANCO  [170]CARTEIRA  [217]ESPÉCIE  [249]QUANTIDADE DE  [299]VALOR DE MOEDA  [354]VALOR DO DOCUMENTO
+[27]VENCIMENTO  [249]MOEDA
+[187]001  [217]R$  [398]2.511,44
+[67]15/04/2026
+[107]INSTRUÇÕES: (Todas as informações deste boleto são de responsabilidade do beneficiário).
+[354]DESCONTO / ABATIMENTO
+[27]MORA / MUL  [52]TA
+[122]Os encargos sobre o pagamento em atraso constarão na próxima fatura mensal.
+[122]Utilize esta ficha de compensação caso deseje quitar ou pagar parcialmente o saldo
+[354]OUTRAS DEDUÇÕES
+[122]devedor do seu Cartão Inter.
+[27]VALOR COBRADO
+[354]MORA / MUL  [379]TA
+[27]NOSSO NÚMERO
+[122]SR. CAIXA FAVOR NÃO ACEITAR PAGAMENTO EM CHEQUE
+[64]98895182870
+[354]OUTROS ACRÉSCIMOS
+[27]Nº DOCUMENTO
+[79]101/47  [354]VALOR COBRADO
+[398]2.511,44
+[28]AV BARBACENA 1219 STO
+[110]PAGADOR
+[28]AGOSTINHO 30190131  [166]MATEUS NASCIMENTO RODRIGUES
+[166]PRACA T 23 61  [270]AP 2802
+[28]BELO HORIZONTE / MG
+[166]SETOR BUENO
+[166]74215130  [191]GOIANIA  [215]GO
+[110]Uniprime
+[359]AUTENTICAÇÃO MECÂNICA
+[27]AUTENTICAÇÃO MECÂNICA
+[362]FICHA DE COMPENSAÇÃO

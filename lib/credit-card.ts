@@ -86,6 +86,55 @@ export function currentOpenInvoice(
   };
 }
 
+/**
+ * Retorna a fatura que VENCE em targetMonth/targetYear.
+ * Ex: C6 closing=25 due=4, invoiceForDueMonth(4, 2026, 25, 4) →
+ *   dueDate: 04/04/2026, closingDate: 25/03/2026, window: 26/02/2026 → 25/03/2026
+ */
+export function invoiceForDueMonth(
+  targetMonth: number, // 1-12
+  targetYear: number,
+  closingDay: number,
+  dueDay: number,
+): InvoiceWindow {
+  const dueDate = clampDay(targetYear, targetMonth - 1, dueDay);
+
+  // Fechamento é no mês anterior se due_day > closing_day, senão mesmo mês
+  let closingMonthIdx = targetMonth - 1;
+  let closingYear = targetYear;
+  if (dueDay > closingDay) {
+    closingMonthIdx -= 1;
+  }
+  if (closingMonthIdx < 0) {
+    closingMonthIdx += 12;
+    closingYear -= 1;
+  }
+  const closingDate = clampDay(closingYear, closingMonthIdx, closingDay);
+
+  // Janela começa no dia seguinte ao fechamento anterior
+  let prevClosingMonthIdx = closingMonthIdx - 1;
+  let prevClosingYear = closingYear;
+  if (prevClosingMonthIdx < 0) {
+    prevClosingMonthIdx += 12;
+    prevClosingYear -= 1;
+  }
+  const prevClosing = clampDay(
+    prevClosingYear,
+    prevClosingMonthIdx,
+    closingDay,
+  );
+  const periodStart = new Date(prevClosing);
+  periodStart.setDate(periodStart.getDate() + 1);
+  periodStart.setHours(0, 0, 0, 0);
+
+  return {
+    periodStart,
+    closingDate,
+    dueDate,
+    label: `Fatura de ${MONTH_NAMES[targetMonth - 1]}/${targetYear}`,
+  };
+}
+
 export function daysUntil(date: Date, reference: Date = new Date()): number {
   const a = new Date(date);
   a.setHours(0, 0, 0, 0);
