@@ -69,13 +69,15 @@ async function getData(month: number, year: number) {
       )
       .gte("occurred_at", monthStart.toISOString())
       .lte("occurred_at", monthEnd.toISOString())
-      .eq("status", "pago"),
+      .eq("status", "pago")
+      .eq("excluded_from_stats", false),
     supabase
       .from("transactions")
       .select("type,amount")
       .gte("occurred_at", prevMonthStart.toISOString())
       .lte("occurred_at", prevMonthEnd.toISOString())
-      .eq("status", "pago"),
+      .eq("status", "pago")
+      .eq("excluded_from_stats", false),
     supabase
       .from("transactions")
       .select(
@@ -83,11 +85,12 @@ async function getData(month: number, year: number) {
       )
       .gte("occurred_at", yearStart.toISOString())
       .lte("occurred_at", yearEnd.toISOString())
-      .eq("status", "pago"),
+      .eq("status", "pago")
+      .eq("excluded_from_stats", false),
     supabase
       .from("transactions")
       .select(
-        "id,type,amount,description,occurred_at,essentiality,status,category:categories!transactions_category_id_fkey(id,name,color),account:accounts!transactions_account_id_fkey(id,name,color),place:places(id,name)",
+        "id,type,amount,description,occurred_at,essentiality,status,excluded_from_stats,category:categories!transactions_category_id_fkey(id,name,color),account:accounts!transactions_account_id_fkey(id,name,color),place:places(id,name)",
       )
       .order("occurred_at", { ascending: false })
       .limit(6),

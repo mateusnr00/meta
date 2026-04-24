@@ -30,6 +30,7 @@ export default async function RelatoriosPage() {
     )
     .gte("occurred_at", sixMonthsAgo.toISOString())
     .eq("status", "pago")
+    .eq("excluded_from_stats", false)
     .order("occurred_at", { ascending: true });
 
   const txs = (data ?? []) as unknown as TransactionWithRelations[];

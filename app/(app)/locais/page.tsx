@@ -21,6 +21,7 @@ export default async function LocaisPage() {
       .select("place_id,amount,type,occurred_at")
       .eq("type", "despesa")
       .eq("status", "pago")
+      .eq("excluded_from_stats", false)
       .gte("occurred_at", monthStart)
       .lte("occurred_at", monthEnd),
   ]);

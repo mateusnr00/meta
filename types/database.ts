@@ -98,6 +98,7 @@ export interface Transaction {
   installment_total: number | null;
   installment_group_id: string | null;
   recurring_id: string | null;
+  excluded_from_stats: boolean;
   created_at: string;
   updated_at: string;
 }

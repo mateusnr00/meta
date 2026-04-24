@@ -96,6 +96,9 @@ export function TransactionForm({
     transaction?.credit_card_id ??
       (creditCards.length === 1 ? creditCards[0].id : "none"),
   );
+  const [excludedFromStats, setExcludedFromStats] = useState<boolean>(
+    transaction?.excluded_from_stats ?? false,
+  );
 
   const rootCategories = categories.filter(
     (c) => !c.parent_id && c.type === type,
@@ -131,6 +134,7 @@ export function TransactionForm({
       type === "despesa" &&
       creditCardId !== "none";
     formData.set("credit_card_id", useCard ? creditCardId : "");
+    formData.set("excluded_from_stats", excludedFromStats ? "true" : "false");
 
     start(async () => {
       const action =
@@ -581,6 +585,27 @@ export function TransactionForm({
                 <p className="text-xs text-muted-foreground">
                   Separadas por vírgula.
                 </p>
+              </div>
+
+              <div className="flex items-start gap-3 rounded-lg border border-border/60 bg-muted/30 p-3">
+                <input
+                  type="checkbox"
+                  id="excluded_from_stats"
+                  checked={excludedFromStats}
+                  onChange={(e) => setExcludedFromStats(e.target.checked)}
+                  className="mt-0.5 size-4 cursor-pointer accent-primary"
+                />
+                <label
+                  htmlFor="excluded_from_stats"
+                  className="cursor-pointer text-sm"
+                >
+                  <div className="font-medium">Não contar nas análises</div>
+                  <div className="text-[11px] text-muted-foreground">
+                    Útil para contas que você paga em nome de outra pessoa (ex:
+                    mãe, família). O saldo da conta ainda é afetado, mas a
+                    transação fica fora dos gráficos, KPIs e relatórios.
+                  </div>
+                </label>
               </div>
             </CardContent>
           </Card>

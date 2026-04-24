@@ -90,6 +90,7 @@ export async function createTransaction(formData: FormData) {
         installment_number: i + 1,
         installment_total: total,
         installment_group_id: groupId,
+        excluded_from_stats: input.excluded_from_stats ?? false,
       };
     });
     const { error } = await supabase.from("transactions").insert(rows);
@@ -112,6 +113,7 @@ export async function createTransaction(formData: FormData) {
       tags: input.tags,
       notes: input.notes ?? null,
       occurred_at: new Date(input.occurred_at).toISOString(),
+      excluded_from_stats: input.excluded_from_stats ?? false,
     });
     if (error) return { error: error.message };
   }
@@ -147,6 +149,7 @@ export async function updateTransaction(id: string, formData: FormData) {
       tags: input.tags,
       notes: input.notes ?? null,
       occurred_at: new Date(input.occurred_at).toISOString(),
+      excluded_from_stats: input.excluded_from_stats ?? false,
     })
     .eq("id", id);
 

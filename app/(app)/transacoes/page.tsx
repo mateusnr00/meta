@@ -40,7 +40,7 @@ export default async function TransacoesPage({ searchParams }: PageProps) {
   let query = supabase
     .from("transactions")
     .select(
-      "id,type,amount,description,occurred_at,status,essentiality,payment_method,category:categories!transactions_category_id_fkey(id,name,color,essentiality),account:accounts!transactions_account_id_fkey(id,name,color),place:places(id,name),credit_card:credit_cards(id,name,color)",
+      "id,type,amount,description,occurred_at,status,essentiality,payment_method,excluded_from_stats,category:categories!transactions_category_id_fkey(id,name,color,essentiality),account:accounts!transactions_account_id_fkey(id,name,color),place:places(id,name),credit_card:credit_cards(id,name,color)",
     )
     .order("occurred_at", { ascending: false })
     .limit(200);
@@ -185,7 +185,20 @@ export default async function TransacoesPage({ searchParams }: PageProps) {
                       {formatDate(t.occurred_at)}
                     </TableCell>
                     <TableCell className="max-w-[300px]">
-                      <div className="truncate font-medium">{t.description}</div>
+                      <div className="flex items-center gap-1.5">
+                        <span className="truncate font-medium">
+                          {t.description}
+                        </span>
+                        {t.excluded_from_stats ? (
+                          <Badge
+                            variant="outline"
+                            className="shrink-0 border-muted-foreground/40 px-1.5 py-0 text-[9px] text-muted-foreground"
+                            title="Fora das análises"
+                          >
+                            fora das análises
+                          </Badge>
+                        ) : null}
+                      </div>
                       {t.place?.name ? (
                         <div className="truncate text-xs text-muted-foreground">
                           {t.place.name}

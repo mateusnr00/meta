@@ -64,6 +64,7 @@ export default async function MetasPage({
       .select("category_id,amount,type,status")
       .eq("type", "despesa")
       .eq("status", "pago")
+      .eq("excluded_from_stats", false)
       .gte("occurred_at", periodStart)
       .lte("occurred_at", periodEnd),
     supabase

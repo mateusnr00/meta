@@ -17,6 +17,7 @@ export const transactionSchema = z.object({
   notes: z.string().nullable().optional(),
   occurred_at: z.string().min(1),
   installment_total: z.coerce.number().int().min(1).max(120).nullable().optional(),
+  excluded_from_stats: z.coerce.boolean().default(false),
 });
 
 export type TransactionInput = z.infer<typeof transactionSchema>;
