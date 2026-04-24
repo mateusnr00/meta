@@ -45,3 +45,14 @@ next-env.d.ts
 .claude/
 
 .vercel
+
+# PDFs e dados pessoais (faturas, parsed data)
+*.pdf
+*_pos.txt
+invoices-parsed.json
+insert-transactions.sql
+inter-compact.sql
+extract-pdf.mjs
+parse-invoices.mjs
+compact-inter.mjs
+build-inserts.mjs
