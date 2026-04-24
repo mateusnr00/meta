@@ -117,10 +117,14 @@ create table if not exists public.transactions (
   installment_total int,
   installment_group_id uuid,
   recurring_id uuid,
+  excluded_from_stats boolean not null default false,
   created_at timestamptz not null default now(),
   updated_at timestamptz not null default now()
 );
 create index if not exists transactions_user_idx on public.transactions(user_id);
+create index if not exists transactions_not_excluded_idx
+  on public.transactions(user_id, occurred_at desc)
+  where excluded_from_stats = false;
 create index if not exists transactions_occurred_idx on public.transactions(user_id, occurred_at desc);
 create index if not exists transactions_category_idx on public.transactions(category_id);
 create index if not exists transactions_account_idx on public.transactions(account_id);
@@ -280,8 +284,10 @@ end $$;
 -- VIEWS AUXILIARES
 -- ============================================================================
 
--- Saldo por conta. Transações com credit_card_id não afetam o saldo (pagamento
--- da fatura acontece no vencimento, não na data da compra).
+-- Saldo por conta = reflete o banco real. Ignora transações com credit_card_id
+-- (crédito não debita imediatamente). NÃO ignora excluded_from_stats — essas
+-- continuam afetando saldo (o dinheiro saiu da conta de verdade), mas ficam
+-- fora de KPIs/gráficos/relatórios.
 create or replace view public.v_account_balances as
 select
   a.id as account_id,

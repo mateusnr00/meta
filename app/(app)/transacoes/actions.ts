@@ -169,6 +169,26 @@ export async function deleteTransaction(id: string) {
   return { success: true };
 }
 
+export async function toggleExcludedFromStats(id: string) {
+  const { supabase } = await getUserId();
+  const { data: cur } = await supabase
+    .from("transactions")
+    .select("excluded_from_stats")
+    .eq("id", id)
+    .single();
+  if (!cur) return { error: "Transação não encontrada" };
+  const { error } = await supabase
+    .from("transactions")
+    .update({ excluded_from_stats: !cur.excluded_from_stats })
+    .eq("id", id);
+  if (error) return { error: error.message };
+  revalidatePath("/");
+  revalidatePath("/transacoes");
+  revalidatePath("/relatorios");
+  revalidatePath("/contas");
+  return { success: true, excluded: !cur.excluded_from_stats };
+}
+
 export async function duplicateTransaction(id: string) {
   const { supabase, userId } = await getUserId();
   const { data: src } = await supabase

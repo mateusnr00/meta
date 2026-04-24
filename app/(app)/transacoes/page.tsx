@@ -271,7 +271,10 @@ export default async function TransacoesPage({ searchParams }: PageProps) {
                       {formatCurrency(Number(t.amount))}
                     </TableCell>
                     <TableCell>
-                      <TransactionActionsMenu id={t.id} />
+                      <TransactionActionsMenu
+                        id={t.id}
+                        excluded={t.excluded_from_stats ?? false}
+                      />
                     </TableCell>
                   </TableRow>
                 ))}

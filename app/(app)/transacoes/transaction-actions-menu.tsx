@@ -4,7 +4,14 @@ import { useTransition } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { toast } from "sonner";
-import { MoreHorizontal, Copy, Pencil, Trash2 } from "lucide-react";
+import {
+  MoreHorizontal,
+  Copy,
+  Pencil,
+  Trash2,
+  EyeOff,
+  Eye,
+} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -16,9 +23,16 @@ import {
 import {
   deleteTransaction,
   duplicateTransaction,
+  toggleExcludedFromStats,
 } from "./actions";
 
-export function TransactionActionsMenu({ id }: { id: string }) {
+export function TransactionActionsMenu({
+  id,
+  excluded,
+}: {
+  id: string;
+  excluded?: boolean;
+}) {
   const router = useRouter();
   const [pending, start] = useTransition();
 
@@ -50,6 +64,35 @@ export function TransactionActionsMenu({ id }: { id: string }) {
         >
           <Copy className="mr-2 size-4" />
           Duplicar
+        </DropdownMenuItem>
+        <DropdownMenuSeparator />
+        <DropdownMenuItem
+          onClick={() => {
+            start(async () => {
+              const res = await toggleExcludedFromStats(id);
+              if (res?.error) toast.error(res.error);
+              else {
+                toast.success(
+                  res.excluded
+                    ? "Tirado das análises e do saldo"
+                    : "Voltou para as análises e saldo",
+                );
+                router.refresh();
+              }
+            });
+          }}
+        >
+          {excluded ? (
+            <>
+              <Eye className="mr-2 size-4" />
+              Incluir nas análises
+            </>
+          ) : (
+            <>
+              <EyeOff className="mr-2 size-4" />
+              Tirar das análises
+            </>
+          )}
         </DropdownMenuItem>
         <DropdownMenuSeparator />
         <DropdownMenuItem
