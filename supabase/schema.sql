@@ -280,7 +280,8 @@ end $$;
 -- VIEWS AUXILIARES
 -- ============================================================================
 
--- Saldo por conta (initial_balance + entradas - saídas + transferências recebidas - enviadas)
+-- Saldo por conta. Transações com credit_card_id não afetam o saldo (pagamento
+-- da fatura acontece no vencimento, não na data da compra).
 create or replace view public.v_account_balances as
 select
   a.id as account_id,
@@ -290,9 +291,11 @@ select
   a.type,
   a.initial_balance
     + coalesce((select sum(amount) from public.transactions t
-        where t.account_id = a.id and t.type = 'receita' and t.status = 'pago'), 0)
+        where t.account_id = a.id and t.type = 'receita' and t.status = 'pago'
+          and t.credit_card_id is null), 0)
     - coalesce((select sum(amount) from public.transactions t
-        where t.account_id = a.id and t.type = 'despesa' and t.status = 'pago'), 0)
+        where t.account_id = a.id and t.type = 'despesa' and t.status = 'pago'
+          and t.credit_card_id is null), 0)
     - coalesce((select sum(amount) from public.transactions t
         where t.account_id = a.id and t.type = 'transferencia' and t.status = 'pago'), 0)
     + coalesce((select sum(amount) from public.transactions t

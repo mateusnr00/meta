@@ -28,6 +28,7 @@ import { toDatetimeLocal } from "@/lib/format";
 import type {
   Account,
   Category,
+  CreditCard,
   Place,
   Transaction,
   TransactionType,
@@ -45,6 +46,7 @@ interface Props {
   categories: Category[];
   accounts: Account[];
   places: Place[];
+  creditCards?: CreditCard[];
 }
 
 export function TransactionForm({
@@ -53,6 +55,7 @@ export function TransactionForm({
   categories,
   accounts,
   places,
+  creditCards = [],
 }: Props) {
   const router = useRouter();
   const [pending, start] = useTransition();
@@ -89,6 +92,10 @@ export function TransactionForm({
       return "";
     },
   );
+  const [creditCardId, setCreditCardId] = useState<string>(
+    transaction?.credit_card_id ??
+      (creditCards.length === 1 ? creditCards[0].id : "none"),
+  );
 
   const rootCategories = categories.filter(
     (c) => !c.parent_id && c.type === type,
@@ -118,6 +125,12 @@ export function TransactionForm({
       "destination_account_id",
       destAccountId && destAccountId !== "none" ? destAccountId : "",
     );
+    // Cartão só é enviado se pagamento = Crédito e tipo = despesa
+    const useCard =
+      paymentMethod === "Crédito" &&
+      type === "despesa" &&
+      creditCardId !== "none";
+    formData.set("credit_card_id", useCard ? creditCardId : "");
 
     start(async () => {
       const action =
@@ -438,6 +451,62 @@ export function TransactionForm({
                   })}
                 </div>
               </div>
+
+              {paymentMethod === "Crédito" && type === "despesa" ? (
+                <div className="grid gap-1.5">
+                  <Label>Cartão</Label>
+                  {creditCards.length === 0 ? (
+                    <div className="rounded-lg border border-dashed border-border/60 bg-muted/20 p-3 text-xs text-muted-foreground">
+                      Você ainda não tem cartões cadastrados.{" "}
+                      <Link
+                        href="/cartoes"
+                        className="text-primary underline-offset-2 hover:underline"
+                      >
+                        Cadastrar cartão
+                      </Link>
+                    </div>
+                  ) : (
+                    <Select
+                      value={creditCardId}
+                      onValueChange={(v) => setCreditCardId(v ?? "none")}
+                    >
+                      <SelectTrigger>
+                        <SelectValue>
+                          {(v: string | null) => {
+                            if (!v || v === "none") return "Selecione um cartão";
+                            const c = creditCards.find((x) => x.id === v);
+                            return c ? (
+                              <span className="flex items-center gap-2">
+                                <span
+                                  className="size-2 rounded-full"
+                                  style={{ backgroundColor: c.color }}
+                                />
+                                {c.name}
+                              </span>
+                            ) : (
+                              "Selecione"
+                            );
+                          }}
+                        </SelectValue>
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="none">— não informar —</SelectItem>
+                        {creditCards.map((c) => (
+                          <SelectItem key={c.id} value={c.id}>
+                            <span className="flex items-center gap-2">
+                              <span
+                                className="size-2 rounded-full"
+                                style={{ backgroundColor: c.color }}
+                              />
+                              {c.name}
+                            </span>
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  )}
+                </div>
+              ) : null}
             </CardContent>
           </Card>
 

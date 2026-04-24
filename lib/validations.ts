@@ -63,3 +63,30 @@ export const budgetSchema = z.object({
 });
 
 export type BudgetInput = z.infer<typeof budgetSchema>;
+
+export const creditCardSchema = z.object({
+  name: z.string().min(1, "Informe o nome").max(80),
+  brand: z.string().max(40).nullable().optional(),
+  credit_limit: z.coerce.number().min(0).default(0),
+  closing_day: z.coerce.number().int().min(1).max(31).default(1),
+  due_day: z.coerce.number().int().min(1).max(31).default(10),
+  color: z
+    .string()
+    .regex(/^#[0-9a-fA-F]{6}$/, "Cor inválida")
+    .default("#6366f1"),
+});
+
+export type CreditCardInput = z.infer<typeof creditCardSchema>;
+
+export const goalSchema = z.object({
+  name: z.string().min(1, "Informe o nome").max(80),
+  target_amount: z.coerce.number().positive("Informe o valor alvo"),
+  current_amount: z.coerce.number().min(0).default(0),
+  target_date: z.string().nullable().optional(),
+  color: z
+    .string()
+    .regex(/^#[0-9a-fA-F]{6}$/, "Cor inválida")
+    .default("#10b981"),
+});
+
+export type GoalInput = z.infer<typeof goalSchema>;

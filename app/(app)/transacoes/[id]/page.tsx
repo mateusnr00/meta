@@ -4,6 +4,7 @@ import { TransactionForm } from "@/components/transaction-form";
 import type {
   Account,
   Category,
+  CreditCard,
   Place,
   Transaction,
 } from "@/types/database";
@@ -18,7 +19,7 @@ export default async function EditTransacaoPage({
   const { id } = await params;
   const supabase = await createClient();
 
-  const [tx, cats, accs, places] = await Promise.all([
+  const [tx, cats, accs, places, cards] = await Promise.all([
     supabase.from("transactions").select("*").eq("id", id).single(),
     supabase
       .from("categories")
@@ -31,6 +32,11 @@ export default async function EditTransacaoPage({
       .eq("archived", false)
       .order("name"),
     supabase.from("places").select("*").eq("archived", false).order("name"),
+    supabase
+      .from("credit_cards")
+      .select("*")
+      .eq("archived", false)
+      .order("name"),
   ]);
 
   if (!tx.data) notFound();
@@ -46,6 +52,7 @@ export default async function EditTransacaoPage({
         categories={(cats.data ?? []) as Category[]}
         accounts={(accs.data ?? []) as Account[]}
         places={(places.data ?? []) as Place[]}
+        creditCards={(cards.data ?? []) as CreditCard[]}
       />
     </div>
   );
