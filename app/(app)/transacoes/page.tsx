@@ -21,6 +21,7 @@ import {
 import { formatCurrency, formatDate } from "@/lib/format";
 import { TransactionFilters } from "./filters";
 import { TransactionActionsMenu } from "./transaction-actions-menu";
+import { ExportCsvButton } from "./export-csv-button";
 import type {
   Account,
   Category,
@@ -88,13 +89,17 @@ export default async function TransacoesPage({ searchParams }: PageProps) {
             {transactions.length === 1 ? "" : "s"} no período
           </p>
         </div>
-        <Link
-          href="/transacoes/nova"
-          className={cn(buttonVariants({ variant: "default", size: "sm" }), "gap-2")}
-        >
-          <Plus className="size-4" />
-          Nova transação
-        </Link>
+        <div className="flex items-center gap-2">
+          <ExportCsvButton />
+          <Link
+            href="/transacoes/nova"
+            className={cn(buttonVariants({ variant: "default", size: "sm" }), "gap-2")}
+          >
+            <Plus className="size-4" />
+            <span className="hidden sm:inline">Nova transação</span>
+            <span className="sm:hidden">Nova</span>
+          </Link>
+        </div>
       </div>
 
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">

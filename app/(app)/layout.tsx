@@ -2,6 +2,7 @@ import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
 import { AppSidebar } from "@/components/app-sidebar";
 import { AppHeader } from "@/components/app-header";
+import { KeyboardShortcuts } from "@/components/keyboard-shortcuts";
 
 export default async function AppLayout({
   children,
@@ -22,6 +23,7 @@ export default async function AppLayout({
 
   return (
     <div className="flex min-h-screen bg-background">
+      <KeyboardShortcuts />
       <AppSidebar userEmail={email} isAdmin={admin} />
       <div className="flex min-w-0 flex-1 flex-col">
         <AppHeader userEmail={email} isAdmin={admin} />

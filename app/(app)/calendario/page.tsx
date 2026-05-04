@@ -10,6 +10,7 @@ import {
 import { buttonVariants } from "@/components/ui/button";
 import { formatCurrency, monthLabel } from "@/lib/format";
 import type { TransactionWithRelations } from "@/types/database";
+import { DayCell } from "./day-detail-button";
 
 export const dynamic = "force-dynamic";
 
@@ -153,7 +154,6 @@ export default async function CalendarioPage({ searchParams }: Props) {
             {Array.from({ length: daysInMonth }, (_, i) => {
               const day = i + 1;
               const entry = byDay.get(day)!;
-              const resultado = entry.receitas - entry.despesas;
               const hasData = entry.transactions.length > 0;
               const isToday =
                 day === now.getDate() &&
@@ -161,50 +161,25 @@ export default async function CalendarioPage({ searchParams }: Props) {
                 year === now.getFullYear();
 
               return (
-                <div
+                <DayCell
                   key={day}
-                  className={`flex min-h-[88px] flex-col gap-1 rounded-lg border p-2 transition-colors ${
-                    isToday
-                      ? "border-primary/60 bg-primary/5"
-                      : "border-border/60 bg-card/40"
-                  } ${hasData ? "hover:border-border" : ""}`}
-                >
-                  <div className="flex items-center justify-between">
-                    <div
-                      className={`text-xs font-medium ${
-                        isToday ? "text-primary" : "text-muted-foreground"
-                      }`}
-                    >
-                      {day}
-                    </div>
-                    {entry.transactions.length > 0 ? (
-                      <div className="text-[9px] text-muted-foreground">
-                        {entry.transactions.length}
-                      </div>
-                    ) : null}
-                  </div>
-                  {hasData ? (
-                    <div className="flex flex-col gap-0.5 text-[10px] tabular-nums">
-                      {entry.receitas > 0 ? (
-                        <div className="truncate text-success">
-                          + {formatCurrency(entry.receitas)}
-                        </div>
-                      ) : null}
-                      {entry.despesas > 0 ? (
-                        <div className="truncate text-danger">
-                          - {formatCurrency(entry.despesas)}
-                        </div>
-                      ) : null}
-                      <div
-                        className={`truncate font-semibold ${
-                          resultado >= 0 ? "text-success" : "text-danger"
-                        }`}
-                      >
-                        = {formatCurrency(resultado)}
-                      </div>
-                    </div>
-                  ) : null}
-                </div>
+                  day={day}
+                  month={month}
+                  year={year}
+                  receitas={entry.receitas}
+                  despesas={entry.despesas}
+                  isToday={isToday}
+                  hasData={hasData}
+                  transactions={entry.transactions.map((t) => ({
+                    id: t.id,
+                    type: t.type,
+                    amount: Number(t.amount),
+                    description: t.description,
+                    occurred_at: t.occurred_at,
+                    status: t.status,
+                    category: t.category ?? null,
+                  }))}
+                />
               );
             })}
           </div>
